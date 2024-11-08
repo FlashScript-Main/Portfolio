@@ -1,3 +1,4 @@
+/* #region base-styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +29,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -54,7 +55,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -82,6 +83,7 @@
     @apply bg-nftCustom-cta;
   }
 }
+/* #endregion */
 
 /* #region custom-theme-switcher-colors */
 /* Custom Theme Switcher Colors */
@@ -464,4 +466,146 @@
 /* Custom Transition */
 .main-transition-color {
   @apply transition-colors duration-300 ease-in-out;
+}
+
+/* #region svg-styles */
+/* SVGs */
+.storefront-svg {
+  @apply fill-nftCustom-cta w-6 h-6 lg:w-8 lg:h-8;
+}
+
+.storefront-svg-footer {
+  @apply fill-nftCustom-cta w-8 h-8;
+}
+
+.user-svg,
+.envelope-simple-svg-newAccount,
+.lock-key-svg {
+  @apply fill-nftCustom-create_account_svg w-5 h-5;
+}
+
+.user-svg-header {
+  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.envelope-simple-svg {
+  @apply fill-nftCustom-text group-hover:fill-nftCustom-cta w-5 h-5 md:hidden;
+}
+
+.eye-svg {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.eye-svg-magic-mashrooms {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.eye-slash-svg {
+  @apply fill-nftCustom-text;
+}
+
+.arrow-right-svg {
+  @apply fill-nftCustom-text;
+}
+
+.rocket-launch-svg {
+  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.rocket-launch-svg-rankings {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.rocket-svg {
+  @apply fill-nftCustom-text;
+}
+
+.arrow-left-svg {
+  @apply fill-nftCustom-text;
+}
+
+.globe-svg {
+  @apply fill-nftCustom-text;
+}
+
+.globe-svg-artist-page,
+.discord-logo-svg-artist-page,
+.youtube-logo-svg-artist-page,
+.instagram-logo-svg-artist-page {
+  @apply fill-nftCustom-c_l_text w-6 h-6 xl:w-8 xl:h-8 hover:fill-nftCustom-cta;
+}
+
+.twitter-logo-svg-artist-page {
+  @apply stroke-nftCustom-c_l_text fill-nftCustom-background w-6 h-6 xl:w-8 xl:h-8 hover:stroke-nftCustom-cta;
+}
+
+.globe-svg-nft-page {
+  @apply fill-nftCustom-c_l_text w-6 h-6 xl:w-8 xl:h-8 group-hover:fill-nftCustom-cta;
+}
+
+.arrow-right-svg-nft-page {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta group-hover:translate-x-2 transition-all;
+}
+
+.trend-up-svg {
+  @apply fill-nftCustom-text;
+}
+
+.user-circle-svg {
+  @apply fill-nftCustom-text;
+}
+
+.plus-svg {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.plus-svg-marketplace-page {
+  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta group-hover:rotate-180 transition-all;
+}
+.magnifying-glass-svg {
+  @apply fill-nftCustom-text;
+}
+
+.list-svg {
+  @apply fill-nftCustom-text;
+}
+
+.wallet-svg {
+  @apply fill-nftCustom-text;
+}
+
+.copy-svg {
+  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
+}
+
+.discord-logo-svg {
+  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
+}
+
+.youtube-logo-svg {
+  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
+}
+
+.twitter-logo-svg {
+  @apply stroke-nftCustom-c_l_text fill-nftCustom-footer-bg w-8 h-8 hover:stroke-nftCustom-cta; 
+}
+
+.instagram-logo-svg {
+  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
+}
+
+/* #endregion */
+
+/* Bacground Image */
+.magic-mashrooms-background {
+  background-color: var(--nft-background-secondary);
+  background-image: url("/magic-mashrooms.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Hexagon Shape */
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }

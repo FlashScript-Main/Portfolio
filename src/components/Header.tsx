@@ -3,7 +3,7 @@
 import { navbarLinks } from "@/constant"
 import { useTranslations } from "next-intl";
 import Link from "next/link"
-import CustomButton from "./CustomButton";
+// import CustomButton from "./CustomButton";
 import { StorefrontSVG } from "@/interface";
 import {  
     Navbar as NextUINavbar,   
@@ -15,9 +15,7 @@ import { useState } from "react";
 import { iranSans } from "@/utils/fonts";
 import { MotionDiv, MotionLi } from "@/animations/motion-provider";
 import MoreOptions from '@/components/include/MoreOptions';
-import useUserStore from "@/stores/useUserStore";
-import UserSignedUp from "./UserSignedUp";
-import NFTHamburgerButton from "./NFTHamburgerButton";
+// import UserSignedUp from "./UserSignedUp";
 import { motion } from "framer-motion";
 
 const Header = ({ locale }: { locale: string }) => {
@@ -27,7 +25,6 @@ const Header = ({ locale }: { locale: string }) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const { username } = useUserStore();
 
     return (
         <NextUINavbar 
@@ -91,7 +88,7 @@ const Header = ({ locale }: { locale: string }) => {
                         transition={{ delay: 1, }}
                         className={` |  |  | ${language("isEnglish") === "false" && "order-first"}`}
                     >
-                        {username === "" ? (
+                        {/* {username === "" ? (
                             <CustomButton 
                                 translateButton={translateHeader("button-text")} 
                                 locale={locale} 
@@ -103,7 +100,7 @@ const Header = ({ locale }: { locale: string }) => {
                             />
                         ) : (
                             <UserSignedUp />
-                        )}
+                        )} */}
                     </MotionDiv>
                 </div>
 
@@ -123,10 +120,10 @@ const Header = ({ locale }: { locale: string }) => {
 
                     <NextUINavbarItem onClick={() => setIsMenuOpen(false)}>
                         <Link 
-                            href={`${username === "" ? `/${locale}/create-account` : `/${locale}/dashboard`}`}
+                            href={""}
                             className={`mx-auto w-fit | text-nftCustom-cta md:text-lg hover:text-nftCustom-text font-semibold text-center | grid | main-transition-color`}
                         >
-                            {username === "" ? translateHeader("button-text") : username}
+                            {/* {username === "" ? translateHeader("button-text") : username} */}
                         </Link>
                     </NextUINavbarItem>
                 </NextUINavbarMenu>   
@@ -138,7 +135,7 @@ const Header = ({ locale }: { locale: string }) => {
                     transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
                 >
                     <NextUINavbarMenuToggle
-                        icon={<NFTHamburgerButton isMenuOpen={isMenuOpen} />}
+                        // icon={<NFTHamburgerButton isMenuOpen={isMenuOpen} />}
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         className={`lg:hidden w-fit | text-nftCustom-text hover:text-nftCustom-cta |  | rounded-full group main-transition-color`}
                     />

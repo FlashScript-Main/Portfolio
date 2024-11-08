@@ -1,4 +1,5 @@
-import { Work_Sans, Space_Mono } from 'next/font/google'
+import { Work_Sans } from 'next/font/google'
+import { Space_Mono } from 'next/font/google'
 import localFont from "next/font/local";
 
 const workSans_font = Work_Sans({

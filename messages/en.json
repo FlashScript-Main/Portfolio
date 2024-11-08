@@ -1,0 +1,12 @@
+{
+    "language": {
+        "isEnglish": "true"
+    },
+    "Header": {
+        "logo": "NFT Marketplace",
+        "marketplace": "Marketplace",
+        "rankings": "Rankings",
+        "connect-wallet": "Connect a wallet",
+        "button-text": "Sign Up"
+    }
+}

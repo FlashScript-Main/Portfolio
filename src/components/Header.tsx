@@ -1,6 +1,5 @@
 "use client";
 
-import { navbarLinks } from "@/constant"
 import { useTranslations } from "next-intl";
 import Link from "next/link"
 // import CustomButton from "./CustomButton";

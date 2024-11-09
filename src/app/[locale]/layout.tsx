@@ -4,7 +4,7 @@ import { Providers } from "@/providers/next-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { Header } from "@/components";
+// import { Header } from "@/components";
 import { workSans } from "@/utils/fonts";
 import { Toaster } from "@/components/ui/toaster"
 import NFTLoadingSuspense from "@/components/NFTLoadingSuspense";
@@ -48,8 +48,7 @@ export default async function RootLayout({
                     >
                         <Providers>
                             <NFTLoadingSuspense>
-                                {/* <Header locale={locale} /> */}
-                                    {children}
+                                {children}
                                 <Toaster />
                             </NFTLoadingSuspense>
                         </Providers>

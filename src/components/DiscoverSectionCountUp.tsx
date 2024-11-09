@@ -1,7 +1,6 @@
 "use client";
 
 import { MotionDiv } from "@/animations/motion-provider";
-import { discoverNumbers } from "@/constant";
 import { spaceMono } from "@/utils/fonts";
 import { useTranslations } from "next-intl";
 import CountUp from "react-countup";

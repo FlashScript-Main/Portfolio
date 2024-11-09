@@ -71,16 +71,7 @@
 @layer utilities {
   /* Custom Scrollbar */
   .nft-scrollbar::-webkit-scrollbar {
-    @apply w-3 max-md:hidden;
-  }
-  .nft-scrollbar::-webkit-scrollbar-track {
-    @apply bg-nftCustom-background;
-  }
-  .nft-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-nftCustom-background_secondary rounded-lg main-transition-color;
-  }
-  .nft-scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-nftCustom-cta;
+    @apply hidden;
   }
 }
 /* #endregion */

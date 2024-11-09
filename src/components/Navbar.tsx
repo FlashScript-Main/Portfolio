@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Brain, BriefcaseBusiness, CalendarIcon, HomeIcon, House, MailIcon, PencilIcon } from "lucide-react";
@@ -13,6 +15,8 @@ import {
 } from "@/components/ui/tooltip";
 // import { ModeToggle } from "@/components/mode-toggle";
 import { Dock, DockIcon } from "@/components/ui/dock";
+import MoreOptions from "./include/MoreOptions";
+import useLanguage from "@/hooks/useLanguage";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -77,11 +81,6 @@ social: {
     url: "#",
     icon: Icons.linkedin,
     },
-    X: {
-    name: "X",
-    url: "#",
-    icon: Icons.x,
-    },
     email: {
     name: "Send Email",
     url: "#",
@@ -92,14 +91,13 @@ social: {
 };
 
 export default function Navbar() {
+
+    const { isFarsi } = useLanguage();
     return (
-        <div 
-        // className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
-        >
-        <div className={`w-fit max-lg:fixed lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 |  |  | `}>
+        <div className={`w-fit max-lg:fixed lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 |  |  | `}>
         <TooltipProvider delayDuration={0}>
             <Dock direction="middle" className={cn(
-                        "border-2 border-indigo-500 bg-blue-200 hover:border-purple-500 transition-colors",
+                        `border-2 border-indigo-500 bg-blue-200 hover:border-purple-500 transition-colors ${isFarsi && "flex-row-reverse"}`,
                         )}>
                 <DockIcon>
                 <Tooltip>
@@ -109,13 +107,13 @@ export default function Navbar() {
                         // aria-label={item.label}
                         className={cn(
                         buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full hover:bg-rose-500 text-yellow-900 hover:text-blue-600",
+                        "size-12 rounded-full hover:bg-rose-500 text-blue-800 hover:text-blue-600",
                         )}
                     >
                         <House className="size-4" />
                     </Link>
                     </TooltipTrigger>
-                    <TooltipContent className={`bg-rose-600 text-yellow-500 |  |  | `}>
+                    <TooltipContent className={`bg-rose-600 text-yellow-500 | max-lg:hidden |  | `}>
                     <p>Something</p>
                     </TooltipContent>
                 </Tooltip>
@@ -184,19 +182,19 @@ export default function Navbar() {
                 </DockIcon>
             ))}
             <Separator orientation="vertical" className="h-full py-2 bg-indigo-500 max-md:hidden"  />
-            {/* <DockIcon>
+
+            <DockIcon>
                 <Tooltip>
-                <TooltipTrigger asChild>
-                    <ModeToggle className="rounded-full" />
-                </TooltipTrigger>
-                <TooltipContent>
-                    <p>Theme</p>
-                </TooltipContent>
+                    <TooltipTrigger asChild>
+                        <MoreOptions />
+                    </TooltipTrigger>
+                    <TooltipContent className={`bg-rose-600 text-yellow-500 |  |  | `}>
+                        <p>Something</p>
+                    </TooltipContent>
                 </Tooltip>
-            </DockIcon> */}
+            </DockIcon>
             </Dock>
         </TooltipProvider>
-        </div>
         </div>
     );
 }

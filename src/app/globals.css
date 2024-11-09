@@ -78,39 +78,12 @@
 
 /* #region custom-theme-switcher-colors */
 /* Custom Theme Switcher Colors */
-.nftDefault {
-  /* 
-    --nft-primary: #2B2B2B;
-    --nft-secondary: #2B2B2B;
-    --nft-accent: #A259FF;  
-    --nft-neutral: #858584; 
-    --nft-text: #FFFFFF; 
-
-    --nft-blue-accent: #377DF7;
-    --nft-red-accent: #FF7262;
-  */
-
-  --nft-background: #2B2B2B;
-  --nft-background-secondary: #3B3B3B;
-  --nft-c-l-text: #858584;
-  --nft-text: #FFFFFF;
-  --nft-cta: #A259FF;
-  --nft-text-accent: #CCCCCC;
-
-  --nft-blue-accent: #377DF7;
-  --nft-red-accent: #FF7262;
-
-  /* Header */
-  --nft-header-bg: #2B2B2B;
-
-  /* Footer */
-  --nft-footer-bg: #3B3B3B;
-  
-  --nft-countdown-bg: 59, 59, 59;
-
-  --nft-create-account-svg: #BDBDBD;
-
-  --nft-rankings-change: #00AC4F;
+.default {
+  --portfolio-background: #1e8cb1;
+  --portfolio-card-background: #fbc038;
+  --portfolio-card-border: #e96b0c;
+  --portfolio-text-primary: #ffffff;
+  --portfolio-text-secondary: #d63554;
 }
 
 /* Light Theme */
@@ -459,144 +432,10 @@
   @apply transition-colors duration-300 ease-in-out;
 }
 
-/* #region svg-styles */
-/* SVGs */
-.storefront-svg {
-  @apply fill-nftCustom-cta w-6 h-6 lg:w-8 lg:h-8;
+/* Custom CSS Classes */
+.card-main-features {
+  @apply max-w-full max-h-full bg-portfolio-card_background;
 }
-
-.storefront-svg-footer {
-  @apply fill-nftCustom-cta w-8 h-8;
-}
-
-.user-svg,
-.envelope-simple-svg-newAccount,
-.lock-key-svg {
-  @apply fill-nftCustom-create_account_svg w-5 h-5;
-}
-
-.user-svg-header {
-  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.envelope-simple-svg {
-  @apply fill-nftCustom-text group-hover:fill-nftCustom-cta w-5 h-5 md:hidden;
-}
-
-.eye-svg {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.eye-svg-magic-mashrooms {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.eye-slash-svg {
-  @apply fill-nftCustom-text;
-}
-
-.arrow-right-svg {
-  @apply fill-nftCustom-text;
-}
-
-.rocket-launch-svg {
-  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.rocket-launch-svg-rankings {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.rocket-svg {
-  @apply fill-nftCustom-text;
-}
-
-.arrow-left-svg {
-  @apply fill-nftCustom-text;
-}
-
-.globe-svg {
-  @apply fill-nftCustom-text;
-}
-
-.globe-svg-artist-page,
-.discord-logo-svg-artist-page,
-.youtube-logo-svg-artist-page,
-.instagram-logo-svg-artist-page {
-  @apply fill-nftCustom-c_l_text w-6 h-6 xl:w-8 xl:h-8 hover:fill-nftCustom-cta;
-}
-
-.twitter-logo-svg-artist-page {
-  @apply stroke-nftCustom-c_l_text fill-nftCustom-background w-6 h-6 xl:w-8 xl:h-8 hover:stroke-nftCustom-cta;
-}
-
-.globe-svg-nft-page {
-  @apply fill-nftCustom-c_l_text w-6 h-6 xl:w-8 xl:h-8 group-hover:fill-nftCustom-cta;
-}
-
-.arrow-right-svg-nft-page {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta group-hover:translate-x-2 transition-all;
-}
-
-.trend-up-svg {
-  @apply fill-nftCustom-text;
-}
-
-.user-circle-svg {
-  @apply fill-nftCustom-text;
-}
-
-.plus-svg {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.plus-svg-marketplace-page {
-  @apply fill-nftCustom-cta w-5 h-5 group-hover:fill-nftCustom-cta group-hover:rotate-180 transition-all;
-}
-.magnifying-glass-svg {
-  @apply fill-nftCustom-text;
-}
-
-.list-svg {
-  @apply fill-nftCustom-text;
-}
-
-.wallet-svg {
-  @apply fill-nftCustom-text;
-}
-
-.copy-svg {
-  @apply fill-nftCustom-text w-5 h-5 group-hover:fill-nftCustom-cta;
-}
-
-.discord-logo-svg {
-  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
-}
-
-.youtube-logo-svg {
-  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
-}
-
-.twitter-logo-svg {
-  @apply stroke-nftCustom-c_l_text fill-nftCustom-footer-bg w-8 h-8 hover:stroke-nftCustom-cta; 
-}
-
-.instagram-logo-svg {
-  @apply fill-nftCustom-c_l_text w-8 h-8 hover:fill-nftCustom-cta;
-}
-
-/* #endregion */
-
-/* Bacground Image */
-.magic-mashrooms-background {
-  background-color: var(--nft-background-secondary);
-  background-image: url("/magic-mashrooms.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-/* Hexagon Shape */
-.hexagon {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+.card-main-paddings {
+  @apply w-full h-full relative px-4 md:px-8 lg:px-6 pt-6 md:pt-8 lg:pt-8 2xl:pt-12 pb-6 md:pb-8 lg:pb-6 2xl:pb-8;
 }

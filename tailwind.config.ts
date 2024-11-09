@@ -13,33 +13,12 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			nftCustom: {
-				background: "var(--nft-background)",
-				background_secondary: "var(--nft-background-secondary)",
-				c_l_text: "var(--nft-c-l-text)",
-				text: "var(--nft-text)",
-				cta: "var(--nft-cta)",
-				text_accent: "var(--nft-text-accent)",
-
-				blue_accent: "var(--nft-blue-accent)",
-				red_accent: "var(--nft-red-accent)",
-				
-				// Header
-				header: {
-					bg: "var(--nft-header-bg)",
-				},
-
-				// Footer
-				footer: {
-					bg: "var(--nft-footer-bg)",
-				},
-
-				countdown_bg: "rgba(var(--nft-countdown-bg))",
-
-				create_account_svg: "var(--nft-create-account-svg)",
-
-				rankings_change: "var(--nft-rankings-change)"
-
+			portfolio: {
+				background: "var(--portfolio-background)",
+				card_background: "var(--portfolio-card-background)",
+				card_border: "var(--portfolio-card-border)",
+				text_primary: "var(--portfolio-text-primary)",
+				text_secondary: "var(--portfolio-text-secondary)",
 			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

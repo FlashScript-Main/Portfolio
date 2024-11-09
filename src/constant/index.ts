@@ -1,6 +1,6 @@
 
 export const nftMarketplaceThemes = [
-    "nftDefault", 
+    "default", 
     "light", 
     "dark", 
     "monochrome",
@@ -25,7 +25,7 @@ export const nftMarketplaceThemes = [
 
 export const customThemes = [
     { 
-        value: "nftDefault", 
+        value: "default", 
         nameEn: "Default",
         nameFa: "پیش فرض",
         bgColor: "bg-gradient-to-r from-[#2B2B2B] to-[#3B3B3B]",

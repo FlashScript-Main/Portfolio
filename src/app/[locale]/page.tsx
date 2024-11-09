@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 // import { metadataValues } from '@/constant';
 import useLanguage from '@/hooks/useLanguage';
 import FlashScript from '@/template/home-page/Home-FlashScript';
+import Skills from '@/template/home-page/Home-Skills';
 import { iranSans } from '@/utils/fonts';
 // import { useTranslations } from 'next-intl';
 import { redirect } from 'next/navigation';
@@ -76,10 +77,10 @@ const Home = ({ params: { locale } }: MainPagePropsType) => {
     return (
         <GlobalMotionMain className={`overflow-x-hidden | selection:text-nftCustom-cta selection:bg-nftCustom-text |  | ${isFarsi && `${iranSans}`}`}>
             <Navbar />
-            <section className={`h-screen w-full | bg-[#1e8cb1] | grid place-content-center | border-2 border-indigo-500`}>
+            <section className={`h-screen w-full | bg-portfolio-background | grid place-content-center | border-2 border-indigo-500`}>
                 {/* w-[80vw] h-[80vh] | grid-rows-9 md:grid-rows-5 lg:grid-rows-4 */}
                 <DivToScroll className={`w-full mt-20 md:mt-24 md:w-[730px] lg:w-[950px] xl:w-[1200px] 2xl:w-[1500px] max-sm:px-4 mx-auto overflow-hidden |  | grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 gap-4 | border-2 border-green-600`}>
-                    <div className={`w-full h-full | bg-green-500 | lg:max-xl:row-start-2 lg:max-xl:col-start-3 xl:row-span-2 | `}>Skills</div>
+                    <Skills />
                     <div className={`w-full h-full | bg-red-500 | lg:max-xl:row-start-4 lg:max-xl:col-start-1 | `}>{"I'm from Iran"}</div>
                     <div className={`w-full h-full | bg-indigo-500 | xl:col-span-2  | `}>Time Zone</div>
                     <div className={`w-full h-full | bg-rose-600 | max-md:row-start-4 | `}>8+ Happy Clients</div>

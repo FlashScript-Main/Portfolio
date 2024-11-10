@@ -274,3 +274,24 @@ export const home_SkillsIcons = [
         classNames: "max-xl:hidden xl:mt-[4.5rem] xl:ml-[3rem] 2xl:mt-[5.5rem] 2xl:ml-[4rem]"
     },
 ];
+
+export const home_MainProjectsIcons = [
+    {
+        id: 1,
+        src: "nft-logo.png",
+        alt: "NFT Marketplace",
+        classNames: "z-[30] mt-[2.5rem] -ml-[2rem] md:mt-[3rem] md:-ml-[2.3rem] xl:mt-[6rem] xl:-ml-[3rem]"
+    },
+    {
+        id: 2,
+        src: "code-tube.png",
+        alt: "Code Tube",
+        classNames: "z-[20] mt-[2.5rem] -ml-[0.2rem] md:mt-[3rem] xl:mt-[6rem] xl:ml-[0.1rem]"
+    },
+    {
+        id: 3,
+        src: "frontend-mentor.png",
+        alt: "Front-End Mentor",
+        classNames: "z-[10] mt-[2.5rem] ml-[1.5rem] md:mt-[3rem] md:ml-[1.8rem] xl:mt-[6rem] xl:ml-[3.4rem]"
+    },
+];

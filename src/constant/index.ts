@@ -199,3 +199,78 @@ export const metadataValues = {
     categoryTitleEn: "NFT Marketplace | Category - ",
     categoryTitleFa: "بازار توکن دیجیتال | دسته بندی - ",
 }
+
+export const home_SkillsIcons = [
+    {
+        id: 1,
+        src: "nextjs.svg",
+        alt: "Next.js",
+        classNames: "-mt-[1.5rem]"
+    },
+    {
+        id: 2,
+        src: "reactjs.svg",
+        alt: "React.js",
+        classNames: "-mt-[0.5rem] ml-[3rem] md:-mt-[1.5rem] 2xl:ml-[4rem]"
+    },
+    {
+        id: 3,
+        src: "typescript.svg",
+        alt: "TypeScript",
+        classNames: "-mt-[0.5rem] -ml-[3rem] md:-mt-[1.5rem] 2xl:-ml-[4rem]"
+    },
+    {
+        id: 4,
+        src: "tailwind.svg",
+        alt: "TailwindCSS",
+        classNames: "mt-[1rem] -ml-[6rem] md:mt-[1.3rem] xl:mt-[1.5rem] 2xl:-ml-[8rem] 2xl:mt-[2rem]"
+    },
+    {
+        id: 5,
+        src: "vite.svg",
+        alt: "Vite",
+        classNames: "mt-[1rem] ml-[6rem] md:mt-[1.3rem] xl:mt-[1.5rem] 2xl:mt-[2rem] 2xl:ml-[8rem]"
+    },
+    {
+        id: 6,
+        src: "framer-motion.jpg",
+        alt: "Framer Motion",
+        classNames: "mt-[4rem] -ml-[6rem] md:-mt-[1.5rem] md:ml-[6rem] 2xl:ml-[8rem]"
+    },
+    {
+        id: 7,
+        src: "react-query.ico",
+        alt: "React Query",
+        classNames: "mt-[4rem] ml-[6rem] md:-mt-[1.5rem] md:-ml-[6rem] 2xl:-ml-[8rem]"
+    },
+    {
+        id: 8,
+        src: "zustand.svg",
+        alt: "Zustand",
+        classNames: "max-md:hidden md:mt-[4.2rem] md:-ml-[6rem] xl:mt-[4.5rem] 2xl:mt-[5.5rem] 2xl:-ml-[8rem]"
+    },
+    {
+        id: 9,
+        src: "shadcn-light.png",
+        alt: "ShadCN",
+        classNames: "max-md:hidden md:mt-[4.2rem] md:ml-[6rem] xl:mt-[4.5rem] 2xl:mt-[5.5rem] 2xl:ml-[8rem]"
+    },
+    {
+        id: 10,
+        src: "rapid-api.ico",
+        alt: "RapidAPI",
+        classNames: "max-xl:hidden xl:mt-[4.5rem] xl:-ml-[3rem] 2xl:mt-[5.5rem] 2xl:-ml-[4rem]"
+    },
+    {
+        id: 11,
+        src: "polypane.jpg",
+        alt: "Polypane",
+        classNames: "max-xl:hidden xl:mt-[4.5rem] 2xl:mt-[5.5rem]"
+    },
+    {
+        id: 12,
+        src: "lucide-react.jpg",
+        alt: "Lucide React",
+        classNames: "max-xl:hidden xl:mt-[4.5rem] xl:ml-[3rem] 2xl:mt-[5.5rem] 2xl:ml-[4rem]"
+    },
+];

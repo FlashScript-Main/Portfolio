@@ -94,7 +94,7 @@ export default function Navbar() {
 
     const { isFarsi } = useLanguage();
     return (
-        <div className={`w-fit max-lg:fixed lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 |  |  | `}>
+        <div className={`w-fit max-lg:fixed lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999] |  |  | `}>
         <TooltipProvider delayDuration={0}>
             <Dock direction="middle" className={cn(
                         `border-2 border-indigo-500 bg-blue-200 hover:border-purple-500 transition-colors ${isFarsi && "flex-row-reverse"}`,

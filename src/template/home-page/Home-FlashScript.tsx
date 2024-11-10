@@ -20,12 +20,12 @@ const FlashScript = () => {
                 </div>
 
                 <div>
-                    <h1 className={` | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex items-center gap-2 |  | `}>
+                    <h1 className={` | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex items-center gap-2 2xl:gap-3 |  | `}>
                         <span>{"I'm"}</span>
                         <span className={`text-portfolio-text_secondary`}>FlashScript</span>
                     </h1>
 
-                    <h2 className={`my-2 md:my-4 lg:my-6 | text-portfolio-text_primary text-xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold | flex gap-2 |  | `}>
+                    <h2 className={`my-2 md:my-4 lg:my-6 | text-portfolio-text_primary text-xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold | flex gap-2 2xl:gap-3 |  | `}>
                         <span>a</span>
                         <span className={`text-portfolio-text_secondary`}>Front-End Developer</span>
                     </h2>

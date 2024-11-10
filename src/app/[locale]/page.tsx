@@ -1,5 +1,3 @@
-"use client";
-
 import { GlobalMotionMain } from '@/animations/MotionAnimations';
 import { DivToScroll } from '@/animations/ScrollAnimations';
 import Navbar from '@/components/Navbar';

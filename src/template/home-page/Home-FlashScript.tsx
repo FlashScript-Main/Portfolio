@@ -1,10 +1,28 @@
+"use client";
+
+import { MotionDiv } from "@/animations/motion-provider";
+import useScreenSize from "@/hooks/useScreenSize"
 import Image from "next/image"
 
 const FlashScript = () => {
 
+    const { xs, sm, md, lg } = useScreenSize();
+
     return (
-        <div className={`card-main-features |  | max-lg:row-start-1 md:col-span-2 lg:max-xl:row-span-2 lg:max-xl:row-start-2 xl:col-start-2 xl:row-start-2 xl:col-end-4 xl:row-end-4 | lg:rounded-r-[20px] lg:rounded-bl-none xl:rounded-[20px] border-t-4 border-t-portfolio-card_border max-lg:border-x-4 max-lg:border-x-portfolio-card_border lg:border-t-0 lg:border-l-4 lg:border-l-portfolio-card_border xl:border-none`}>
-            <div className={`card-main-paddings |  |  | `}>
+        <MotionDiv 
+            initial={{ y: `${(xs || sm || md) && "20%"}`, x: `${lg && "-20%"}`, opacity: 0 }}
+            whileInView={{ y: "0%", x: "0%", opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 0.5 , duration: 0.25, ease: "easeInOut" }}
+            className={`card-main-features |  | max-lg:row-start-1 md:col-span-2 lg:max-xl:row-span-2 lg:max-xl:row-start-2 xl:col-start-2 xl:row-start-2 xl:col-end-4 xl:row-end-4 | lg:rounded-r-[20px] lg:rounded-bl-none xl:rounded-[20px] border-t-4 border-t-portfolio-card_border max-lg:border-x-4 max-lg:border-x-portfolio-card_border lg:border-t-0 lg:border-l-4 lg:border-l-portfolio-card_border xl:border-none`}
+        >
+            <MotionDiv 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: 0.75 , duration: 0.25, ease: "easeInOut" }}
+                className={`card-main-paddings |  |  | `}
+            >
                 <span className={`mb-2 md:mb-4 lg:mb-6 | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex flex-col  | `}>
                     Hi 🖐🏻
                 </span>
@@ -34,8 +52,8 @@ const FlashScript = () => {
                         Empowering innovation with lightning-fast, cutting-edge solutions
                     </p>
                 </div>
-            </div>
-        </div>
+            </MotionDiv>
+        </MotionDiv>
     )
 
 }

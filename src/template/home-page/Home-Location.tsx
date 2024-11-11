@@ -1,12 +1,34 @@
+"use client";
+
 // import useLanguage from "@/hooks/useLanguage"
+
+import { MotionDiv } from "@/animations/motion-provider"
+import useScreenSize from "@/hooks/useScreenSize";
 
 const Location = () => {
 
     // const { isEnglish } = useLanguage();
 
+    const { xs, sm, md, lg, xl, xxl } = useScreenSize();
+
     return (
-        <div className={`card-main-features |  | lg:max-xl:row-start-4 lg:max-xl:col-start-1 | max-md:border-x-4 max-md:border-x-portfolio-card_border md:border-l-4 md:border-l-portfolio-card_border md:rounded-r-[20px] lg:border-b-4 lg:border-b-portfolio-card_border lg:rounded-r-none lg:rounded-tr-[20px] xl:rounded-tr-none xl:rounded-b-[20px] xl:border-b-0 xl:border-l-0 xl:border-t-4 xl:border-t-portfolio-card_border`}>
-            <div className={`py-4 lg:py-6 |  | flex flex-col items-center justify-center gap-4 lg:gap-6 | `}>
+        <MotionDiv 
+            initial={{ 
+                y: `${((xs || sm || lg) && "20%") || ((xl || xxl) && "-20%")}`, 
+                x: `${((md || lg) && "-20%")}`, opacity: 0 
+            }}
+            whileInView={{ y: "0%", x: "0%", opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 1.75 , duration: 0.25, ease: "easeInOut" }}
+            className={`card-main-features |  | lg:max-xl:row-start-4 lg:max-xl:col-start-1 | max-md:border-x-4 max-md:border-x-portfolio-card_border md:border-l-4 md:border-l-portfolio-card_border md:rounded-r-[20px] lg:border-b-4 lg:border-b-portfolio-card_border lg:rounded-r-none lg:rounded-tr-[20px] xl:rounded-tr-none xl:rounded-b-[20px] xl:border-b-0 xl:border-l-0 xl:border-t-4 xl:border-t-portfolio-card_border`}
+        >
+            <MotionDiv 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: 2 , duration: 0.25, ease: "easeInOut" }}
+                className={`py-4 lg:py-6 |  | flex flex-col items-center justify-center gap-4 lg:gap-6 | `}
+            >
                 <h4 className={` | text-portfolio-text_primary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center gap-[0.3rem] md:gap-2 |  | `}>
                     <span>
                         {"I'm from"}
@@ -38,8 +60,8 @@ const Location = () => {
                         Earth
                     </a>
                 </p>
-            </div>
-        </div>
+            </MotionDiv>
+        </MotionDiv>
     )
 
 }

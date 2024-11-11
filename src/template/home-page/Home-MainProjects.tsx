@@ -1,5 +1,9 @@
+"use client";
+
+import { MotionDiv } from "@/animations/motion-provider";
 import { home_MainProjectsIcons } from "@/constant";
 import useLanguage from "@/hooks/useLanguage";
+import useScreenSize from "@/hooks/useScreenSize";
 import Image from "next/image";
 import Link from "next/link"
 
@@ -7,9 +11,26 @@ const MainProjects = () => {
 
     const { isEnglish } = useLanguage();
 
+    const { xs, sm, md, lg, xl, xxl } = useScreenSize();
+
     return (
-        <div className={`card-main-features |  | max-md:row-start-3 md:max-lg:row-start-2 md:max-lg:col-start-2 lg:max-xl:row-start-3 lg:max-xl:col-start-3 xl:row-span-2 | max-md:border-x-4 max-md:border-x-portfolio-card_border md:border-r-4 md:border-r-portfolio-card_border md:rounded-l-[20px] xl:rounded-bl-none xl:border-b-4 xl:border-b-portfolio-card_border`}>
-            <div className={`my-4 xl:mt-8 xl:mb-0 |  |  | `}>
+        <MotionDiv 
+            initial={{ 
+                y: `${((xs || sm || xl || xxl) && "20%")}`, 
+                x: `${((md || lg || xl || xxl) && "20%")}`, opacity: 0 
+            }}
+            whileInView={{ y: "0%", x: "0%", opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 1 , duration: 0.25, ease: "easeInOut" }}
+            className={`card-main-features |  | max-md:row-start-3 md:max-lg:row-start-2 md:max-lg:col-start-2 lg:max-xl:row-start-3 lg:max-xl:col-start-3 xl:row-span-2 | max-md:border-x-4 max-md:border-x-portfolio-card_border md:border-r-4 md:border-r-portfolio-card_border md:rounded-l-[20px] xl:rounded-bl-none xl:border-b-4 xl:border-b-portfolio-card_border`}
+        >
+            <MotionDiv 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: 1.25 , duration: 0.25, ease: "easeInOut" }}
+                className={`my-4 xl:mt-8 xl:mb-0 |  |  | `}
+            >
                 <div className={`relative w-fit mx-auto |  | flex items-center | `}>
                     <h4 className={`w-full xl:w-3/4 xl:mx-auto | text-portfolio-text_secondary text-xl md:text-2xl lg:text-[1.625rem] xl:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | `}>
                         <span>
@@ -39,8 +60,8 @@ const MainProjects = () => {
                         Check Them Now!
                     </Link>
                 </p>
-            </div>
-        </div>
+            </MotionDiv>
+        </MotionDiv>
     )
 
 }

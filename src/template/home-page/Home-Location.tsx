@@ -27,7 +27,7 @@ const Location = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 2 , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 lg:py-6 |  | flex flex-col items-center justify-center gap-4 lg:gap-6 | `}
+                className={`py-4 lg:py-6 2xl:pt-7 md:max-xl:w-full md:max-xl:h-full |  | flex flex-col items-center justify-center gap-4 md:max-lg:gap-5 lg:gap-6 | `}
             >
                 <h4 className={` | text-portfolio-text_primary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center gap-[0.3rem] md:gap-2 |  | `}>
                     <span>

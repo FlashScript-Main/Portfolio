@@ -1,7 +1,7 @@
 "use client";
 
 import { iranSans } from "@/utils/fonts";
-import { Modal, ModalBody, ModalContent, ModalHeader, useDisclosure } from "@nextui-org/react";
+import { Modal, ModalBody, ModalContent, ModalHeader, Tooltip, useDisclosure } from "@nextui-org/react";
 import { Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AnimateMotionButton from "./AnimateMotionButton";
@@ -18,12 +18,25 @@ const MoreOptions = () => {
 
     return (
         <div>
-            <button 
-                onClick={onOpen}
-                className={`px-1 py-1 xl:py-2 xl:px-2 my-auto | text-nftCustom-text hover:text-nftCustom-cta bg-nftCustom-cta hover:bg-nftCustom-text | grid | rounded-full main-transition-color`}
+            <Tooltip 
+                showArrow={false} 
+                content={"More Options"}
+                placement="top"
+                offset={4}
+                closeDelay={0}
+                classNames={{
+                    base: "before:bg-portfolio-card_background max-md:before:invisible",
+                    content: "text-portfolio-text_secondary text-sm font-semibold bg-portfolio-card_background rounded-md"
+                }}
+                className={`max-md:hidden |  |  | `}
             >
-                <Settings />
-            </button>
+                <button 
+                    onClick={onOpen}
+                    className={`px-1 py-1 xl:py-2 xl:px-2 my-auto | text-portfolio-background hover:text-portfolio-text_primary hover:bg-portfolio-text_secondary | grid | rounded-full main-transition-color`}
+                >
+                    <Settings />
+                </button>
+            </Tooltip>
 
             <Modal 
                 isOpen={isOpen} 

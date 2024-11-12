@@ -1,8 +1,12 @@
+import Navbar from "@/components/Navbar"
 
 const SkillsPage = () => {
 
     return (
-        <div>SkillsPage</div>
+        <div>
+            <Navbar />
+            SkillsPage
+        </div>
     )
 
 }

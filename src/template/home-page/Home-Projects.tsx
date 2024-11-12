@@ -23,7 +23,7 @@ const Projects = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 1.75 , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 md:py-6 xl:pt-3 | text-center |  | `}
+                className={`py-4 md:py-6 xl:pt-3 lg:max-xl:w-full lg:max-xl:h-full 2xl:w-full 2xl:h-full | text-center | lg:max-xl:grid lg:max-xl:place-content-center 2xl:grid 2xl:place-content-center | `}
             >
                 <h4 className={`xl:mt-4 |  font-semibold | flex flex-col items-center justify-center gap-3 lg:gap-4 2xl:gap-5 |  | `}>
                     <span className={` | text-portfolio-text_secondary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl |  | `}>

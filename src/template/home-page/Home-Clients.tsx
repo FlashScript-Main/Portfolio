@@ -23,9 +23,9 @@ const Clients = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 1.5 , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 md:py-6 lg:py-6 lg:px-6 | text-center |  | `}
+                className={`py-4 md:py-6 lg:py-6 lg:px-6 xl:max-2xl:px-4 md:max-lg:w-full md:max-lg:h-full xl:w-full xl:h-full | text-center | md:max-lg:grid md:max-lg:place-content-center xl:grid xl:place-content-center | `}
             >
-                <h4 className={`xl:mt-4 |  font-semibold | flex items-center justify-center gap-4 md:gap-6 lg:gap-2 xl:gap-2 |  | `}>
+                <h4 className={` |  font-semibold | flex items-center justify-center gap-4 md:gap-6 lg:gap-2 xl:gap-2 |  | `}>
                     <span className={` | text-portfolio-text_secondary text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl |  | `}>
                         8+
                     </span>

@@ -79,7 +79,6 @@ const Home = ({ params: { locale } }: MainPagePropsType) => {
         <GlobalMotionMain className={`overflow-x-hidden | selection:text-nftCustom-cta selection:bg-nftCustom-text |  | ${isFarsi && `${iranSans}`}`}>
             <Navbar />
             <section className={`w-full lg:h-screen |  | grid place-content-center | `}>
-                {/* w-[80vw] h-[80vh] | grid-rows-9 md:grid-rows-5 lg:grid-rows-4 | 2xl:mb-32 */}
                 <DivToScroll className={`w-full mt-28 mb-20 md:max-lg:mt-32 md:w-[730px] lg:w-[950px] xl:w-[1200px] 2xl:w-[1500px] max-sm:px-4 mx-auto overflow-hidden |  | grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 | `}>
                     <Skills />
                     <Location />

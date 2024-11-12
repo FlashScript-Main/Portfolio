@@ -21,13 +21,13 @@ const FlashScript = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 0.75 , duration: 0.25, ease: "easeInOut" }}
-                className={`card-main-paddings |  |  | `}
+                className={`card-main-paddings lg:max-xl:w-full lg:max-xl:h-full lg:max-xl:grid lg:max-xl:place-content-center |  |  | `}
             >
                 <span className={`mb-2 md:mb-4 lg:mb-6 | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex flex-col  | `}>
                     Hi 🖐🏻
                 </span>
 
-                <div className={`absolute top-[0.8rem] md:top-[0.8rem] right-[1rem] md:right-[2rem] lg:top-[1.5rem] lg:right-[1.5rem] w-fit h-fit |  |  | `}>
+                <div className={`absolute top-[0.8rem] md:top-[0.8rem] right-[1rem] md:right-[2rem] lg:max-xl:top-[2rem] lg:max-xl:right-[2rem] xl:top-[1.5rem] xl:right-[1.5rem] w-fit h-fit |  |  | `}>
                     <Image 
                         src={"/skills/flash-script.jpeg"}
                         alt="FlashScript"

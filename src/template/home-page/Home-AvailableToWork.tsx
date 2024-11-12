@@ -1,13 +1,17 @@
 "use client"
 
+import { MotionDiv } from "@/animations/motion-provider";
 import { useToast } from "@/hooks/use-toast";
 import useLanguage from "@/hooks/useLanguage";
+import useScreenSize from "@/hooks/useScreenSize";
 import { iranSans } from "@/utils/fonts";
 import { useState } from "react";
 
 const AvailableToWork = () => {
 
     const { isEnglish, isFarsi } = useLanguage();
+
+    const { xs, sm, md, lg, xl, xxl } = useScreenSize();
 
     const [copied, setCopied] = useState(false);
 
@@ -32,8 +36,23 @@ const AvailableToWork = () => {
     };
 
     return (
-        <div className={`card-main-features |  | lg:max-xl:row-start-1 lg:max-xl:col-start-1 | max-md:border-x-4 max-md:border-b-4 max-md:border-portfolio-card_border border-portfolio-card_border md:border-b-4 md:border-r-4 md:rounded-tl-[20px] lg:border-b-0 lg:border-r-0 lg:border-t-4 lg:border-l-4 lg:rounded-tl-none lg:rounded-br-[20px] xl:border-t-0 xl:border-l-0 xl:rounded-br-none xl:rounded-t-[20px] xl:border-b-4`}>
-            <div className={`py-4 xl:py-6 space-y-3 md:space-y-4 lg:w-full lg:h-full |  | lg:grid lg:place-content-center | `}>
+        <MotionDiv 
+            initial={{ 
+                y: `${((xs || sm || md || xl || xxl) && "20%") || ((lg) && "-20%")}`, 
+                x: `${((lg) && "-20%")  || ((md) && "20%")}`, opacity: 0 
+            }}
+            whileInView={{ y: "0%", x: "0%", opacity: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: ((xs || sm) ? 1 : 2.5) , duration: 0.25, ease: "easeInOut" }}
+            className={`card-main-features |  | lg:max-xl:row-start-1 lg:max-xl:col-start-1 | max-md:border-x-4 max-md:border-b-4 max-md:border-portfolio-card_border border-portfolio-card_border md:border-b-4 md:border-r-4 md:rounded-tl-[20px] lg:border-b-0 lg:border-r-0 lg:border-t-4 lg:border-l-4 lg:rounded-tl-none lg:rounded-br-[20px] xl:border-t-0 xl:border-l-0 xl:rounded-br-none xl:rounded-t-[20px] xl:border-b-4`}
+        >
+            <MotionDiv 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: ((xs || sm) ? 1.25 : 2.75) , duration: 0.25, ease: "easeInOut" }}
+                className={`py-4 xl:py-6 space-y-3 md:space-y-4 md:w-full md:h-full |  | md:grid md:place-content-center | `}
+            >
                 <button 
                     onClick={handleCopy}
                     className={`w-fit mx-auto px-4 | bg-portfolio-card_background hover:bg-portfolio-background ${copied && ""} | grid | group rounded-2xl border-2 border-portfolio-card_border hover:border-portfolio-text_secondary main-transition-color`}
@@ -48,8 +67,8 @@ const AvailableToWork = () => {
                         Currently Available To Work 🔔
                     </p>
                 </div>
-            </div>
-        </div>
+            </MotionDiv>
+        </MotionDiv>
     )
 
 }

@@ -1,9 +1,12 @@
 "use client";
 
 import { MotionDiv } from "@/animations/motion-provider"
+import useLanguage from "@/hooks/useLanguage";
 import useScreenSize from "@/hooks/useScreenSize";
 
 const Projects = () => {
+
+    const { isEnglish, isFarsi } = useLanguage();
 
     const { xs, sm, md, lg, xl, xxl } = useScreenSize();
 
@@ -26,12 +29,17 @@ const Projects = () => {
                 className={`py-4 md:py-6 xl:pt-3 lg:max-xl:w-full lg:max-xl:h-full 2xl:w-full 2xl:h-full | text-center | lg:max-xl:grid lg:max-xl:place-content-center 2xl:grid 2xl:place-content-center | `}
             >
                 <h4 className={`xl:mt-4 |  font-semibold | flex flex-col items-center justify-center gap-3 lg:gap-4 2xl:gap-5 |  | `}>
-                    <span className={` | text-portfolio-text_secondary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl |  | `}>
-                        26+ Projects ✨
+                    <span className={` | text-portfolio-text_secondary |  | ${isEnglish ? "text-xl md:text-2xl lg:text-3xl 2xl:text-4xl" : "text-2xl md:text-3xl 2xl:text-4xl"}`}>
+                        {isEnglish ? "26+ Projects ✨" : (
+                            <div className={` |  |  | ${isFarsi && "flex flex-row-reverse items-center justify-center gap-2"}`}>
+                                <span>۲۶+</span>
+                                <span>✨ پروژه</span>
+                            </div>
+                        )}
                     </span>
 
                     <span className={` | text-portfolio-text_primary text-lg md:text-xl lg:text-2xl 2xl:text-3xl |  | `}>
-                        Bringing Ideas to Life
+                        {isEnglish ? "Bringing Ideas to Life" : "تبدیل ایده‌ها به واقعیت"}
                     </span>
                 </h4>
             </MotionDiv>

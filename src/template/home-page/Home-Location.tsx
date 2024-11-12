@@ -1,13 +1,12 @@
 "use client";
 
-// import useLanguage from "@/hooks/useLanguage"
-
+import useLanguage from "@/hooks/useLanguage"
 import { MotionDiv } from "@/animations/motion-provider"
 import useScreenSize from "@/hooks/useScreenSize";
 
 const Location = () => {
 
-    // const { isEnglish } = useLanguage();
+    const { isEnglish, isFarsi } = useLanguage();
 
     const { xs, sm, md, lg, xl, xxl } = useScreenSize();
 
@@ -27,38 +26,86 @@ const Location = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 2 , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 lg:py-6 2xl:pt-7 md:max-xl:w-full md:max-xl:h-full |  | flex flex-col items-center justify-center gap-4 md:max-lg:gap-5 lg:gap-6 | `}
+                className={`py-4 lg:py-6 2xl:pt-7 md:max-xl:w-full md:max-xl:h-full |  | flex flex-col items-center justify-center gap-4 md:max-lg:gap-5 lg:gap-6 | ${isFarsi && "xl:w-full xl:h-full xl:grid xl:place-content-center"}`}
             >
-                <h4 className={` | text-portfolio-text_primary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center gap-[0.3rem] md:gap-2 |  | `}>
-                    <span>
-                        {"I'm from"}
-                    </span>
+                <h4 className={` | text-portfolio-text_primary text-xl md:text-2xl font-semibold | flex items-center justify-center gap-[0.3rem] md:gap-2 |  | ${isEnglish ? "lg:text-3xl 2xl:text-4xl" : "lg:text-2xl 2xl:text-3xl"}`}>
+                    {isEnglish ? (
+                        <>
+                            <span>
+                                {"I'm from"}
+                            </span>
 
-                    <span className={` | text-portfolio-text_secondary |  | `}>
-                        Iran 🌍
-                    </span>
+                            <span className={` | text-portfolio-text_secondary |  | `}>
+                                Iran 🌍
+                            </span>
+                        </>
+                    ) : (
+                        <div className={` |  |  | ${isFarsi && "flex flex-row-reverse items-center justify-center gap-2"}`}>
+                            <span>
+                                من متولد
+                            </span>
+
+                            <span className={` | text-portfolio-text_secondary |  | `}>
+                                ایران
+                            </span>
+
+                            <span>
+                                🌍 هستم
+                            </span>
+                        </div>
+                    )}
                 </h4>
 
-                <p className={` | text-portfolio-background text-sm lg:text-base 2xl:text-lg text-center capitalize font-semibold | flex justify-center items-center gap-1 lg:gap-[0.3rem] | `}>
-                    <span>View on</span>
+                <p className={` | text-portfolio-background text-center capitalize font-semibold | flex justify-center items-center gap-1 lg:gap-[0.3rem] | ${isEnglish ? "text-sm lg:text-base 2xl:text-lg" : "text-sm md:text-base 2xl:text-lg"}`}>
+                    {isEnglish ? (
+                        <>
+                            <span>View on</span>
 
-                    <a 
-                        href={`https://maps.app.goo.gl/2hSzVM8HvBZycnWP8`} 
-                        className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
-                        target={"_blank"}
-                    >
-                        Maps
-                    </a>
+                            <a 
+                                href={`https://maps.app.goo.gl/2hSzVM8HvBZycnWP8`} 
+                                className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
+                                target={"_blank"}
+                            >
+                                Maps
+                            </a>
 
-                    <span>and</span>
+                            <span>and</span>
 
-                    <a 
-                        href={`https://earth.google.com/web/search/Shiraz,+Fars+Province/@29.56637203,52.70293871,1469.95616625a,124492.81517666d,35y,5.76458294h,0t,0r/data=CoQBGlYSUAolMHgzZmIyMGQwYzhjODVmMmUzOjB4NmQwYzViOGFlZjZiNGNmNhltuNlptZc9QCE5Daw-skpKQCoVU2hpcmF6LCBGYXJzIFByb3ZpbmNlGAIgASImCiQJvpUyF1BwNUARupUyF1BwNcAZ3DxJl2fgSUAh3DxJl2fgScBCAggBQgIIAEoNCP___________wEQAA`} 
-                        className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
-                        target={"_blank"}
-                    >
-                        Earth
-                    </a>
+                            <a 
+                                href={`https://earth.google.com/web/search/Shiraz,+Fars+Province/@29.56637203,52.70293871,1469.95616625a,124492.81517666d,35y,5.76458294h,0t,0r/data=CoQBGlYSUAolMHgzZmIyMGQwYzhjODVmMmUzOjB4NmQwYzViOGFlZjZiNGNmNhltuNlptZc9QCE5Daw-skpKQCoVU2hpcmF6LCBGYXJzIFByb3ZpbmNlGAIgASImCiQJvpUyF1BwNUARupUyF1BwNcAZ3DxJl2fgSUAh3DxJl2fgScBCAggBQgIIAEoNCP___________wEQAA`} 
+                                className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
+                                target={"_blank"}
+                            >
+                                Earth
+                            </a>
+                        </>
+                    ) : (
+                        <div className={` |  |  | ${isFarsi && "flex flex-row-reverse items-center justify-center gap-1 xl:gap-[0.3rem]"}`}>
+                            <span>
+                                نمایش در
+                            </span>
+
+                            <a 
+                                href={`https://maps.app.goo.gl/2hSzVM8HvBZycnWP8`} 
+                                className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
+                                target={"_blank"}
+                            >
+                                نقشه گوگل
+                            </a>
+
+                            <span>
+                                و
+                            </span>
+
+                            <a 
+                                href={`https://earth.google.com/web/search/Shiraz,+Fars+Province/@29.56637203,52.70293871,1469.95616625a,124492.81517666d,35y,5.76458294h,0t,0r/data=CoQBGlYSUAolMHgzZmIyMGQwYzhjODVmMmUzOjB4NmQwYzViOGFlZjZiNGNmNhltuNlptZc9QCE5Daw-skpKQCoVU2hpcmF6LCBGYXJzIFByb3ZpbmNlGAIgASImCiQJvpUyF1BwNUARupUyF1BwNcAZ3DxJl2fgSUAh3DxJl2fgScBCAggBQgIIAEoNCP___________wEQAA`} 
+                                className={` | hover:text-portfolio-text_primary |  | main-transition-color`}
+                                target={"_blank"}
+                            >
+                                گوگل زمین
+                            </a>
+                        </div>
+                    )}
                 </p>
             </MotionDiv>
         </MotionDiv>

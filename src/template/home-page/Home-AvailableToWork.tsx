@@ -51,20 +51,20 @@ const AvailableToWork = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: ((xs || sm) ? 1.25 : 2.75) , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 xl:py-6 space-y-3 md:space-y-4 md:w-full md:h-full |  | md:grid md:place-content-center | `}
+                className={`py-4 xl:py-6 space-y-3 md:space-y-4 md:w-full md:h-full |  | md:grid md:place-content-center | ${isFarsi && "lg:max-xl:space-y-6"}`}
             >
                 <button 
                     onClick={handleCopy}
-                    className={`w-fit mx-auto px-4 | bg-portfolio-card_background hover:bg-portfolio-background ${copied && ""} | grid | group rounded-2xl border-2 border-portfolio-card_border hover:border-portfolio-text_secondary main-transition-color`}
+                    className={`w-fit mx-auto px-4 | bg-portfolio-card_background hover:bg-portfolio-background ${copied && ""} | grid | group rounded-2xl border-2 border-portfolio-card_border hover:border-portfolio-text_secondary main-transition-color ${isFarsi && "md:py-1"}`}
                 >
                     <h4 className={`w-full | text-portfolio-text_secondary group-hover:text-portfolio-text_primary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | main-transition-color`}>
-                        Freelancer
+                        {isEnglish ? "Freelancer" : "فریلنسر"}
                     </h4>
                 </button>
 
                 <div>
-                    <p className={` | text-portfolio-background text-sm 2xl:text-lg text-center capitalize font-semibold |  | `}>
-                        Currently Available To Work 🔔
+                    <p className={` | text-portfolio-background capitalize font-semibold |  | ${isEnglish ? "text-sm 2xl:text-lg text-center" : "text-base xl:text-[0.9rem] 2xl:text-lg text-center"}`}>
+                        {isEnglish ? "Currently Available To Work 🔔" : "🔔 هم‌اکنون آماده پذیرش پروژه جدید هستم"}
                     </p>
                 </div>
             </MotionDiv>

@@ -1,10 +1,13 @@
 "use client";
 
 import { MotionDiv } from "@/animations/motion-provider";
+import useLanguage from "@/hooks/useLanguage";
 import useScreenSize from "@/hooks/useScreenSize"
 import Image from "next/image"
 
 const FlashScript = () => {
+
+    const { isEnglish, isFarsi } = useLanguage();
 
     const { xs, sm, md, lg } = useScreenSize();
 
@@ -21,35 +24,53 @@ const FlashScript = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 0.75 , duration: 0.25, ease: "easeInOut" }}
-                className={`card-main-paddings lg:max-xl:w-full lg:max-xl:h-full lg:max-xl:grid lg:max-xl:place-content-center |  |  | `}
+                className={`card-main-paddings lg:max-xl:w-full lg:max-xl:h-full |  |  | ${isEnglish ? "lg:max-xl:grid lg:max-xl:place-content-center" : "lg:max-xl:pt-12"}`}
             >
-                <span className={`mb-2 md:mb-4 lg:mb-6 | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex flex-col  | `}>
-                    Hi 🖐🏻
+                <span className={`mb-2 md:mb-4 lg:mb-6 | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex flex-col | ${isFarsi && "text-end"}`}>
+                    {isEnglish ? "Hi 🖐🏻" : "🖐🏻 سلام"}
                 </span>
 
-                <div className={`absolute top-[0.8rem] md:top-[0.8rem] right-[1rem] md:right-[2rem] lg:max-xl:top-[2rem] lg:max-xl:right-[2rem] xl:top-[1.5rem] xl:right-[1.5rem] w-fit h-fit |  |  | `}>
+                <div className={`absolute ${isEnglish ? "top-[0.8rem] md:top-[0.8rem] right-[1rem] md:right-[2rem] lg:max-xl:top-[2rem] lg:max-xl:right-[2rem] xl:top-[1.5rem] xl:right-[1.5rem]" : "top-[0.8rem] md:top-[0.8rem] left-[1rem] md:left-[2rem] lg:top-[1rem] lg:left-[1rem]"}  w-fit h-fit |  |  | `}>
                     <Image 
                         src={"/skills/flash-script.jpeg"}
                         alt="FlashScript"
                         width={1000}
                         height={1000}
-                        className={`size-[6rem] md:size-[11rem] lg:size-[10rem] 2xl:size-[12rem] object-cover |  |  | rounded-full`}
+                        className={`size-[6rem] md:size-[11rem] lg:size-[10rem] 2xl:size-[12rem] object-cover |  |  | rounded-full ${isFarsi && "max-sm:size-[4rem] sm:max-md:size-[5rem] lg:size-[7.5rem] xl:size-[6.5rem] 2xl:size-[8.5rem]"}`}
                     />
                 </div>
 
                 <div>
-                    <h1 className={` | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex items-center gap-2 2xl:gap-3 |  | `}>
-                        <span>{"I'm"}</span>
-                        <span className={`text-portfolio-text_secondary`}>FlashScript</span>
+                    <h1 className={` | text-portfolio-text_primary text-2xl md:text-4xl lg:text-5xl 2xl:text-6xl font-semibold | flex items-center gap-2 2xl:gap-3 |  | ${isFarsi && "justify-end"}`}>
+                        {isEnglish ? (
+                            <>
+                                <span>{"I'm"}</span>
+                                <span className={`text-portfolio-text_secondary`}>FlashScript</span>
+                            </>
+                        ) : (
+                            <>
+                                <span>{"هستم"}</span>
+                                <span className={`text-portfolio-text_secondary`}>فلش اسکریپت</span>
+                                <span>{"من"}</span>
+                            </>
+                        )}
                     </h1>
 
-                    <h2 className={`my-2 md:my-4 lg:my-6 | text-portfolio-text_primary text-xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold | flex gap-2 2xl:gap-3 |  | `}>
-                        <span>a</span>
-                        <span className={`text-portfolio-text_secondary`}>Front-End Developer</span>
+                    <h2 className={`my-2 md:my-4 lg:my-6 | text-portfolio-text_primary text-xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold | flex gap-2 2xl:gap-3 |  | ${isFarsi && "justify-end"}`}>
+                        {isEnglish ? (
+                            <>
+                                <span>a</span>
+                                <span className={`text-portfolio-text_secondary`}>Front-End Developer</span>
+                            </>
+                        ) : (
+                            <>
+                                <span className={`text-portfolio-text_secondary`}>برنامه نویس فرانت اند</span>
+                            </>
+                        )}
                     </h2>
 
-                    <p className={`mt-4 md:mt-6 xl:mt-8 2xl:mt-10 | text-sm lg:text-base 2xl:text-lg text-center text-portfolio-background capitalize | font-semibold |  | `}>
-                        Empowering innovation with lightning-fast, cutting-edge solutions
+                    <p className={`mt-4 md:mt-6 | text-sm lg:text-base text-center text-portfolio-background capitalize | font-semibold |  | ${isEnglish ? "xl:mt-8 2xl:mt-10 2xl:text-lg" : "md:max-lg:text-lg lg:text-xl lg:mt-8 xl:mt-6 2xl:mt-8 2xl:text-2xl"}`}>
+                        {isEnglish ? "Empowering innovation with lightning-fast, cutting-edge solutions" : "توانمندسازی نوآوری با راه‌حل‌های پیشرفته و فوق‌العاده سریع"}
                     </p>
                 </div>
             </MotionDiv>

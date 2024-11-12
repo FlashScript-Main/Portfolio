@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const MainProjects = () => {
 
-    const { isEnglish } = useLanguage();
+    const { isEnglish, isFarsi } = useLanguage();
 
     const { xs, sm, md, lg, xl, xxl } = useScreenSize();
 
@@ -29,12 +29,12 @@ const MainProjects = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 1.25 , duration: 0.25, ease: "easeInOut" }}
-                className={`my-4 xl:mt-8 xl:mb-0 |  |  | `}
+                className={`my-4 xl:mt-8 xl:mb-0 |  |  | ${isFarsi && "2xl:mt-12"}`}
             >
                 <div className={`relative w-fit mx-auto |  | flex items-center | `}>
-                    <h4 className={`w-full xl:w-3/4 xl:mx-auto | text-portfolio-text_secondary text-xl md:text-2xl lg:text-[1.625rem] xl:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | `}>
+                    <h4 className={`w-full xl:mx-auto | text-portfolio-text_secondary text-xl md:text-2xl lg:text-[1.625rem] xl:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | ${isEnglish ? "xl:w-3/4" : "xl:w-full xl:mt-6"}`}>
                         <span>
-                            Project Highlights 🚀
+                            {isEnglish ? "Project Highlights 🚀" : "🚀 پروژه های برجسته"}
                         </span>
                     </h4>
                     
@@ -52,12 +52,12 @@ const MainProjects = () => {
                     </div>
                 </div>
 
-                <p className={`mt-16 md:mt-[4.5rem] xl:mt-[8rem] | text-sm lg:text-base 2xl:text-lg text-center capitalize font-semibold |  | `}>
+                <p className={`mt-16 md:mt-[4.5rem] | text-center capitalize font-semibold |  | ${isEnglish ? "xl:mt-[8rem] text-sm lg:text-base 2xl:text-lg" : "xl:mt-[8.5rem] text-base xl:text-lg 2xl:text-xl"}`}>
                     <Link 
                         href={`/${isEnglish ? "en" : "fa"}/projects`} 
                         className={` | text-portfolio-background hover:text-portfolio-text_primary |  | main-transition-color`}
                     >
-                        Check Them Now!
+                        {isEnglish ? "Check Them Now!" : "!همین حالا بررسی کنید"}
                     </Link>
                 </p>
             </MotionDiv>

@@ -32,9 +32,9 @@ const Skills = () => {
                 className={`mt-4 xl:mt-[3rem] 2xl:mt-[3.5rem] lg:max-xl:mb-4 xl:grid xl:place-content-center xl:w-full xl:h-fit xl:pt-4 |  |  | `}
             >
                 <div className={`relative w-fit mx-auto |  | flex items-center | `}>
-                    <h4 className={`w-full max-md:mt-[3.5rem] mt-11 lg:mt-[3.5rem] 2xl:mt-[4rem] | text-portfolio-text_secondary text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | `}>
+                    <h4 className={`w-full max-md:mt-[3.5rem] mt-11 lg:mt-[3.5rem] 2xl:mt-[4rem] | text-portfolio-text_secondary text-xl md:text-2xl 2xl:text-4xl font-semibold | flex items-center justify-center |  | ${isEnglish ? "lg:text-3xl" : "lg:text-2xl"}`}>
                         <span>
-                            Skills 💪🏻
+                            {isEnglish ? "Skills 💪🏻" : "💪🏻 مهارت ها"}
                         </span>
                     </h4>
                     
@@ -52,12 +52,12 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <p className={`mt-4 xl:mt-20 2xl:mt-[6rem] max-lg:mb-6 | text-sm lg:text-base 2xl:text-lg text-center capitalize font-semibold |  | `}>
+                <p className={`mt-4 xl:mt-20 2xl:mt-[6rem] max-lg:mb-6 | text-center capitalize font-semibold |  | ${isEnglish ? "text-sm lg:text-base 2xl:text-lg" : "text-base xl:text-lg 2xl:text-xl"}`}>
                     <Link 
                         href={`/${isEnglish ? "en" : "fa"}/skills`} 
                         className={` | text-portfolio-background hover:text-portfolio-text_primary |  | main-transition-color`}
                     >
-                        and Much More!
+                        {isEnglish ? "and Much More!" : "!و بسیاری موارد دیگر"}
                     </Link>
                 </p>
             </MotionDiv>

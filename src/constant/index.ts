@@ -302,19 +302,22 @@ export const home_contactIcons = [
       id: 1,
       icon: Github,
       href: "https://github.com/FlashScript-Main",
-      classNames: "md:max-lg:-ml-[1rem] md:max-lg:-mt-[2.3rem] xl:-ml-[2rem] xl:-mt-[2.3rem] 2xl:-ml-[3rem]"
+      classNamesEn: "md:max-lg:-ml-[1rem] md:max-lg:-mt-[2.3rem] xl:-ml-[2rem] xl:-mt-[2.3rem] 2xl:-ml-[3rem]",
+      classNamesFa: "md:max-lg:-ml-[2rem] md:max-lg:-mt-[2.3rem] xl:-ml-[3rem] xl:-mt-[2.3rem] 2xl:-ml-[3rem]"
   },
   { 
       id: 2,
       icon: Linkedin,
       href: "https://www.linkedin.com/in/flashscript-main/",
-      classNames: "md:max-lg:-ml-[1rem] md:max-lg:mt-[1.3rem] xl:ml-[3rem] xl:-mt-[2.3rem] 2xl:ml-[4rem]"
+      classNamesEn: "md:max-lg:-ml-[1rem] md:max-lg:mt-[1.3rem] xl:ml-[3rem] xl:-mt-[2.3rem] 2xl:ml-[4rem]",
+      classNamesFa: "md:max-lg:-ml-[2rem] md:max-lg:mt-[1.3rem] xl:ml-[2rem] xl:-mt-[2.3rem] 2xl:ml-[2rem]"
   },
   { 
       id: 3,
       icon: Mail,
       href: "mailto:flashscriptmain@gmail.com",
-      classNames: "md:max-lg:ml-[2.5rem] md:max-lg:-mt-[0.3rem] xl:mt-[1rem] xl:ml-[0.6rem]"
+      classNamesEn: "md:max-lg:ml-[2.5rem] md:max-lg:-mt-[0.3rem] xl:mt-[1rem] xl:ml-[0.6rem]",
+      classNamesFa: "md:max-lg:ml-[1.5rem] md:max-lg:-mt-[0.3rem] xl:mt-[1rem] xl:-ml-[0.5rem]"
   },
 ];
 

@@ -1,9 +1,12 @@
 "use client";
 
 import { MotionDiv } from "@/animations/motion-provider"
+import useLanguage from "@/hooks/useLanguage";
 import useScreenSize from "@/hooks/useScreenSize";
 
 const Clients = () => {
+
+    const { isEnglish, isFarsi } = useLanguage();
 
     const { xs, sm, md, lg, xl, xxl } = useScreenSize();
 
@@ -23,15 +26,29 @@ const Clients = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: 1.5 , duration: 0.25, ease: "easeInOut" }}
-                className={`py-4 md:py-6 lg:py-6 lg:px-6 xl:max-2xl:px-4 md:max-lg:w-full md:max-lg:h-full xl:w-full xl:h-full | text-center | md:max-lg:grid md:max-lg:place-content-center xl:grid xl:place-content-center | `}
+                className={`py-4 md:py-6 lg:py-6 lg:px-6 xl:max-2xl:px-4 md:max-lg:w-full md:max-lg:h-full xl:w-full xl:h-full | text-center | md:max-lg:grid md:max-lg:place-content-center xl:grid xl:place-content-center | ${isFarsi && "lg:max-xl:w-full lg:max-xl:h-full lg:max-xl:grid lg:max-xl:place-content-center"}`}
             >
-                <h4 className={` |  font-semibold | flex items-center justify-center gap-4 md:gap-6 lg:gap-2 xl:gap-2 |  | `}>
-                    <span className={` | text-portfolio-text_secondary text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl |  | `}>
-                        8+
+                <h4 className={` |  font-semibold | flex items-center justify-center gap-4 md:gap-6 lg:gap-2 xl:gap-2 |  | ${isFarsi && "flex-row-reverse"}`}>
+                    <span className={` | text-portfolio-text_secondary |  | ${isEnglish ? "text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl" : "text-3xl md:text-4xl 2xl:text-5xl"}`}>
+                        ۸+
                     </span>
 
-                    <span className={` | text-portfolio-text_primary text-lg md:text-xl lg:text-2xl 2xl:text-3xl |  | `}>
-                        Clients Delighted with <br className="" /> My Services 😍
+                    <span className={` | text-portfolio-text_primary |  | ${isEnglish ? "text-lg md:text-xl lg:text-2xl 2xl:text-3xl" : "text-xl md:text-2xl lg:text-2xl 2xl:text-3xl"}`}>
+                        {isEnglish ? (
+                            <>
+                                Clients Delighted with <br /> My Services 😍
+                            </>
+                        ) : (
+                            <>
+                                <span className={` |  |  | ${isFarsi && "hidden"}`}>
+                                    {"😍"}
+                                </span>
+
+                                <span>
+                                    مشتری شیفته <br /> خدمات من شدند
+                                </span>
+                            </>
+                        )}
                     </span>
                 </h4>
             </MotionDiv>

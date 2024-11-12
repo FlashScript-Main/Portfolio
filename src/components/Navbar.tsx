@@ -20,6 +20,7 @@ import useLanguage from "@/hooks/useLanguage";
 import { usePathname } from 'next/navigation';
 import { MotionDiv } from "@/animations/motion-provider";
 import { navbarIcons } from "@/constant";
+import { spaceMono } from "@/utils/fonts";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -36,21 +37,24 @@ export default function Navbar() {
         {
             id: 1,
             icon: House,
-            name: "Home",
+            nameEn: "Home",
+            nameFa: "خانه",
             href: `${isEnglish ? `/en/` : `/fa/`}`,
             isActive: isHome,
         },
         {
             id: 2,
             icon: Brain,
-            name: "Skills",
+            nameEn: "Skills",
+            nameFa: "مهارت‌ها",
             href: `${isEnglish ? `/en/skills` : `/fa/skills`}`,
             isActive: isSkills,
         },
         {
             id: 3,
             icon: BriefcaseBusiness,
-            name: "Projects",
+            nameEn: "Projects",
+            nameFa: "پروژه‌ها",
             href: `${isEnglish ? `/en/projects` : `/fa/projects`}`,
             isActive: isProjects,
         },
@@ -79,7 +83,7 @@ export default function Navbar() {
                               <TooltipTrigger asChild>
                                   <Link
                                       href={item.href}
-                                      aria-label={item.name}
+                                      aria-label={item.nameEn}
                                       className={cn(
                                           buttonVariants({ variant: "ghost", size: "icon" }),
                                           `size-12 rounded-full hover:bg-portfolio-card_background text-portfolio-background hover:text-portfolio-text_secondary ${item.isActive && "text-portfolio-text_secondary"}`,
@@ -89,11 +93,11 @@ export default function Navbar() {
                                   </Link>
                               </TooltipTrigger>
 
-                              <TooltipContent className={`bg-portfolio-card_background text-portfolio-text_secondary font-semibold | max-lg:hidden |  | `}>
+                              <TooltipContent className={`bg-portfolio-card_background text-portfolio-text_secondary font-semibold | max-lg:hidden |  | ${isFarsi && `${spaceMono}`}`}>
                                   <Link
                                       href={item.href}
                                   >
-                                      {item.name}
+                                      {isEnglish ? item.nameEn : item.nameFa}
                                   </Link>
                               </TooltipContent>
                           </Tooltip>
@@ -112,7 +116,7 @@ export default function Navbar() {
                                 <a
                                     href={item.href}
                                     target="_blank"
-                                    aria-label={item.name}
+                                    aria-label={item.nameEn}
                                     className={cn(
                                         buttonVariants({ variant: "ghost", size: "icon" }),
                                         `size-12 rounded-full hover:bg-portfolio-card_background text-portfolio-background hover:text-portfolio-text_secondary`,
@@ -122,11 +126,11 @@ export default function Navbar() {
                                 </a>
                             </TooltipTrigger>
 
-                            <TooltipContent className={`bg-portfolio-card_background text-portfolio-text_secondary font-semibold | max-lg:hidden |  | `}>
+                            <TooltipContent className={`bg-portfolio-card_background text-portfolio-text_secondary font-semibold | max-lg:hidden |  | ${isFarsi && `${spaceMono}`}`}>
                                 <a
                                     href={item.href}
                                 >
-                                    {item.name}
+                                    {isEnglish ? item.nameEn : item.nameFa}
                                 </a>
                             </TooltipContent>
                         </Tooltip>

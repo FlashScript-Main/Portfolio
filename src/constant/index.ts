@@ -325,19 +325,22 @@ export const navbarIcons = [
   {
       id: 1,
       icon: Github,
-      name: "Github",
+      nameEn: "Github",
+      nameFa: "گیت‌هاب",
       href: "https://github.com/FlashScript-Main",
   },
   {
       id: 2,
       icon: Linkedin,
-      name: "LinkedIn",
+      nameEn: "LinkedIn",
+      nameFa: "لینکدین",
       href: "https://www.linkedin.com/in/flashscript-main/",
   },
   {
       id: 3,
       icon: Mail,
-      name: "Send Email",
+      nameEn: "Send Email",
+      nameFa: "ارسال ایمیل",
       href: "mailto:flashscriptmain@gmail.com",
   },
 ];

@@ -1,6 +1,6 @@
 "use client";
 
-import { iranSans } from "@/utils/fonts";
+import { iranSans, spaceMono } from "@/utils/fonts";
 import { Modal, ModalBody, ModalContent, ModalHeader, Tooltip, useDisclosure } from "@nextui-org/react";
 import { Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -20,15 +20,15 @@ const MoreOptions = () => {
         <div>
             <Tooltip 
                 showArrow={false} 
-                content={"More Options"}
+                content={`${language("isEnglish") === "true" ? "More Options" : "گزینه های بیشتر"}`}
                 placement="top"
                 offset={4}
                 closeDelay={0}
                 classNames={{
                     base: "before:bg-portfolio-card_background max-md:before:invisible",
-                    content: "text-portfolio-text_secondary text-sm font-semibold bg-portfolio-card_background rounded-md"
+                    content: `text-portfolio-text_secondary font-semibold bg-portfolio-card_background rounded-md ${language("isEnglish") === "true" ? "text-sm" : `text-xs`}`,
                 }}
-                className={`max-md:hidden |  |  | `}
+                className={`max-md:hidden |  |  | ${language("isEnglish") === "false" && `${spaceMono}`}`}
             >
                 <button 
                     onClick={onOpen}

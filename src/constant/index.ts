@@ -359,90 +359,103 @@ export const skillsTechnologiesInfo = [
       href: "https://github.com/FlashScript-Main",
       classNames: "max-md:mx-auto",
       imageSrc: "flash-script.jpeg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 2,
-      tooltipContent: "Next JS",
-      href: "https://nextjs.org/",
+      tooltipContent: "VSCode",
+      href: "https://code.visualstudio.com/",
       classNames: "md:-mt-[9.5rem] xl:-mt-[11rem]",
-      imageSrc: "nextjs.svg",
+      imageSrc: "vscode.jpg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 3,
-      tooltipContent: "TypeScript",
-      href: "https://www.typescriptlang.org/",
-      classNames: "md:-mt-[7rem] md:-ml-[7rem] xl:-mt-[8.5rem] xl:-ml-[8.5rem]",
-      imageSrc: "typescript.svg",
+      tooltipContent: "HTML",
+      href: "https://www.w3schools.com/html/html_intro.asp",
+      classNames: "md:-mt-[7rem] md:ml-[7rem] xl:-mt-[8.5rem] xl:ml-[8.5rem]",
+      imageSrc: "html.png",
+      imageClassNames: "scale-110 group-hover:scale-125",
   },
   {
       id: 4,
-      tooltipContent: "Tailwind CSS",
-      href: "https://tailwindcss.com/",
-      classNames: "md:-mt-[7rem] md:ml-[7rem] xl:-mt-[8.5rem] xl:ml-[8.5rem]",
-      imageSrc: "tailwind.svg",
+      tooltipContent: "CSS",
+      href: "https://www.w3schools.com/css/css_intro.asp",
+      classNames: "md:mt-[0rem] md:ml-[9.5rem] xl:ml-[11rem]",
+      imageSrc: "css.png",
+      imageClassNames: "scale-110 group-hover:scale-125",
   },
   {
       id: 5,
-      tooltipContent: "Figma",
-      href: "https://www.figma.com/community/file/1173962104946517060/nft-marketplace-template-create-an-nft-website-in-minutes",
+      tooltipContent: "Tailwind CSS",
+      href: "https://tailwindcss.com/",
       classNames: "md:mt-[7rem] md:ml-[7rem] xl:mt-[8.5rem] xl:ml-[8.5rem]",
-      imageSrc: "figma.svg",
+      imageSrc: "tailwind.png",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 6,
-      tooltipContent: "ShadCN",
-      href: "https://ui.shadcn.com/",
+      tooltipContent: "Sass",
+      href: "https://sass-lang.com/",
       classNames: "md:mt-[9.5rem] xl:mt-[11rem]",
-      imageSrc: "shadcn.png",
+      imageSrc: "sass.png",
+      imageClassNames: "scale-90 group-hover:scale-100",
   },
   {
       id: 7,
-      tooltipContent: "Next UI",
-      href: "https://nextui.org/",
+      tooltipContent: "JavaScript",
+      href: "https://www.w3schools.com/js/js_intro.asp",
       classNames: "md:mt-[7rem] md:-ml-[7rem] xl:mt-[8.5rem] xl:-ml-[8.5rem]",
-      imageSrc: "nextui.png",
+      imageSrc: "javascript.svg",
+      imageClassNames: "group-hover:scale-[1.3] scale-[1.2]",
   },
   {
       id: 8,
-      tooltipContent: "Next Themes",
-      href: "https://github.com/pacocoursey/next-themes",
-      classNames: "md:mt-[0rem] md:ml-[9.5rem] xl:ml-[11rem]",
-      imageSrc: "next-theme.png",
+      tooltipContent: "TypeScript",
+      href: "https://www.typescriptlang.org/",
+      classNames: "md:mt-[0rem] md:-ml-[9.5rem] xl:-ml-[11rem]",
+      imageSrc: "typescript.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 9,
-      tooltipContent: "Next Intl",
-      href: "https://next-intl-docs.vercel.app/",
-      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:-mt-[16.5rem] xl:ml-[7rem]",
-      imageSrc: "next-intl.png",
+      tooltipContent: "React JS",
+      href: "https://react.dev/",
+      classNames: "md:-mt-[7rem] md:-ml-[7rem] xl:-mt-[8.5rem] xl:-ml-[8.5rem]",
+      imageSrc: "reactjs.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 10,
-      tooltipContent: "Rapid API",
-      href: "https://rapidapi.com/openseatools/api/openblur/playground",
-      classNames: "md:mt-[0rem] md:-ml-[9.5rem] xl:-ml-[11rem]",
-      imageSrc: "rapid-api.ico",
+      tooltipContent: "Vite",
+      href: "https://vite.dev/",
+      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:-mt-[16.5rem] xl:ml-[7rem]",
+      imageSrc: "vite.png",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 11,
-      tooltipContent: "Zustand",
-      href: "https://zustand-demo.pmnd.rs/",
-      classNames: "md:mt-[6rem] md:-ml-[14rem] xl:mt-[7rem] xl:-ml-[16.5rem]",
-      imageSrc: "zustand.svg",
+      tooltipContent: "Next JS",
+      href: "https://nextjs.org/",
+      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[7rem] xl:ml-[16.5rem]",
+      imageSrc: "nextjs.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 12,
-      tooltipContent: "Axios",
-      href: "https://axios-http.com/",
-      classNames: "md:mt-[0rem] md:-ml-[9.5rem] xl:-ml-[11rem] md:hidden",
-      imageSrc: "axios.svg",
+      tooltipContent: "Git & GitHub",
+      href: "https://git-scm.com/",
+      classNames: "md:mt-[6rem] md:ml-[14rem] xl:mt-[7rem] xl:ml-[16.5rem]",
+      imageSrc: "github.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 13,
-      tooltipContent: "React Query",
-      href: "https://tanstack.com/query/latest",
-      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[7rem] xl:ml-[16.5rem]",
-      imageSrc: "react-query.ico",
+      tooltipContent: "Figma (NOT a designer)",
+      href: "https://www.figma.com/",
+      classNames: "md:mt-[14rem] md:ml-[6rem] xl:mt-[16.5rem] xl:ml-[7rem]",
+      imageSrc: "figma.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 14,
@@ -450,6 +463,7 @@ export const skillsTechnologiesInfo = [
       href: "https://lucide.dev/",
       classNames: "md:-mt-[6rem] md:-ml-[14rem] xl:-mt-[7rem] xl:-ml-[16.5rem]",
       imageSrc: "lucide-react.jpg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 15,
@@ -457,6 +471,7 @@ export const skillsTechnologiesInfo = [
       href: "https://www.framer.com/motion/",
       classNames: "md:-mt-[14rem] md:-ml-[6rem] xl:-mt-[16.5rem] xl:-ml-[7rem]",
       imageSrc: "framer-motion.jpg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 16,
@@ -464,19 +479,168 @@ export const skillsTechnologiesInfo = [
       href: "https://zod.dev/",
       classNames: "md:mt-[14rem] md:-ml-[6rem] xl:mt-[16.5rem] xl:-ml-[7rem]",
       imageSrc: "zod.png",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 17,
       tooltipContent: "Progressive Web Application",
       href: "https://www.npmjs.com/package/next-pwa",
-      classNames: "md:mt-[14rem] md:ml-[6rem] xl:mt-[16.5rem] xl:ml-[7rem]",
+      classNames: "md:mt-[6rem] md:-ml-[14rem] xl:mt-[7rem] xl:-ml-[16.5rem] w-1/2",
       imageSrc: "pwa.svg",
+      imageClassNames: "group-hover:scale-110",
   },
   {
       id: 18,
       tooltipContent: "Polypane",
       href: "https://polypane.app/",
-      classNames: "md:mt-[6rem] md:ml-[14rem] xl:mt-[7rem] xl:ml-[16.5rem]",
+      classNames: "md:mt-[0rem] md:-ml-[9.5rem] xl:-ml-[11rem] md:hidden",
       imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 19,
+      tooltipContent: "19",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:-mt-[15.5rem] xl:ml-[15.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 20,
+      tooltipContent: "20",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:-mt-[15.5rem] xl:-ml-[15.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 21,
+      tooltipContent: "21",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:mt-[15.5rem] xl:-ml-[15.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 22,
+      tooltipContent: "22",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[14rem] md:ml-[6rem] xl:mt-[15.5rem] xl:ml-[15.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 23,
+      tooltipContent: "23",
+      href: "https://polypane.app/",
+      classNames: "md:mt-[0rem] md:ml-[9.5rem] xl:ml-[21.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 24,
+      tooltipContent: "24",
+      href: "https://polypane.app/",
+      classNames: "md:mt-[0rem] md:ml-[9.5rem] xl:-ml-[21.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 25,
+      tooltipContent: "25",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:mt-[14rem] xl:ml-[23.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 26,
+      tooltipContent: "26",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:mt-[6.5rem] xl:-ml-[26rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 27,
+      tooltipContent: "27",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[14rem] xl:ml-[23.5rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+      id: 28,
+      tooltipContent: "28",
+      href: "https://polypane.app/",
+      classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[6.5rem] xl:ml-[26rem]",
+      imageSrc: "polypane.jpg",
+      imageClassNames: "group-hover:scale-110",
+  },
+  {
+    id: 29,
+    tooltipContent: "29",
+    href: "https://polypane.app/",
+    classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[14rem] xl:-ml-[23.5rem]",
+    imageSrc: "polypane.jpg",
+    imageClassNames: "group-hover:scale-110",
+  },
+  {
+    id: 30,
+    tooltipContent: "30",
+    href: "https://polypane.app/",
+    classNames: "md:-mt-[6rem] md:ml-[14rem] xl:mt-[14rem] xl:-ml-[23.5rem]",
+    imageSrc: "polypane.jpg",
+    imageClassNames: "group-hover:scale-110",
+  },
+  {
+    id: 31,
+    tooltipContent: "31",
+    href: "https://polypane.app/",
+    classNames: "md:-mt-[6rem] md:ml-[14rem] xl:-mt-[6.5rem] xl:-ml-[26rem]",
+    imageSrc: "polypane.jpg",
+    imageClassNames: "group-hover:scale-110",
+  },
+  {
+    id: 32,
+    tooltipContent: "32",
+    href: "https://polypane.app/",
+    classNames: "md:-mt-[6rem] md:ml-[14rem] xl:mt-[6.5rem] xl:ml-[26rem]",
+    imageSrc: "polypane.jpg",
+    imageClassNames: "group-hover:scale-110",
   },
 ];
+
+/*
+FlashScript
+VSCode
+HTML
+CSS
+Tailwind CSS
+Sass
+JavaScript
+TypeScript
+React JS
+Vite
+Next JS
+Git & GitHub
+Figma (NOT a designer)
+Adobe XD (NOT a designer)
+Framer Motion
+React Router
+React Query
+React Hook Form
+Zustand
+Axios
+Redux
+Material UI
+ShadCN
+daisyUI
+Next UI
+Zod Schema Validation
+PWA
+Next Themes
+Next Intl
+Rapid API
+Lucide React
+*/

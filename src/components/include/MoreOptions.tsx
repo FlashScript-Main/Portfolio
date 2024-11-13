@@ -28,7 +28,7 @@ const MoreOptions = () => {
                     base: "before:bg-portfolio-card_background max-md:before:invisible",
                     content: `text-portfolio-text_secondary font-semibold bg-portfolio-card_background rounded-md ${language("isEnglish") === "true" ? "text-sm" : `text-xs`}`,
                 }}
-                className={`max-md:hidden |  |  | ${language("isEnglish") === "false" && `${spaceMono}`}`}
+                className={`max-lg:hidden |  |  | ${language("isEnglish") === "false" && `${spaceMono}`}`}
             >
                 <button 
                     onClick={onOpen}

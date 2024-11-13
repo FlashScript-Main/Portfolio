@@ -24,7 +24,7 @@ import { spaceMono } from "@/utils/fonts";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
-export default function Navbar() {
+export default function Navbar({ place }: { place: string }) {
 
     const { isEnglish, isFarsi } = useLanguage();
 
@@ -60,15 +60,13 @@ export default function Navbar() {
         },
     ];
 
-    
-
     return (
         <MotionDiv 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ delay: 0.25 , duration: 0.25, ease: "easeInOut" }}
-            className={`w-fit max-lg:fixed lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[50] |  |  | `}
+            className={`w-fit max-lg:fixed ${place === "skills" && "lg:fixed"} ${place === "home" && "lg:absolute top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2"} top-10 md:top-12 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[50] |  |  | `}
         >
             <TooltipProvider delayDuration={0}>
                 <Dock 

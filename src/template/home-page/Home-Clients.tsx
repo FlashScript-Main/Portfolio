@@ -30,7 +30,7 @@ const Clients = () => {
             >
                 <h4 className={` |  font-semibold | flex items-center justify-center gap-4 md:gap-6 lg:gap-2 xl:gap-2 |  | ${isFarsi && "flex-row-reverse"}`}>
                     <span className={` | text-portfolio-text_secondary |  | ${isEnglish ? "text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl" : "text-3xl md:text-4xl 2xl:text-5xl"}`}>
-                        ۸+
+                        {isEnglish ? "8+" : "۸+"}
                     </span>
 
                     <span className={` | text-portfolio-text_primary |  | ${isEnglish ? "text-lg md:text-xl lg:text-2xl 2xl:text-3xl" : "text-xl md:text-2xl lg:text-2xl 2xl:text-3xl"}`}>

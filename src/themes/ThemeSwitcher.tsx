@@ -18,7 +18,7 @@ const ThemeSwitcher = ({ onClose }: { onClose: () => void }) => {
 
     return (
         <>
-            <h5 className={`mb-2 | text-nftCustom-background text-base md:text-lg font-medium |  | ${language("isEnglish") === "false" && `${iranSans} text-end mb-3`}`}>
+            <h5 className={`mb-2 | text-portfolio-text_primary text-base md:text-lg font-medium |  | ${language("isEnglish") === "false" && `${iranSans} text-end mb-3`}`}>
                 {language("isEnglish") === "true" ? "Change theme" : "تم را تغییر دهید"}
             </h5>
 
@@ -32,7 +32,7 @@ const ThemeSwitcher = ({ onClose }: { onClose: () => void }) => {
                             ${themeOption.value === "nftDefault" && "max-md:col-span-2 lg:col-span-2"}
                             ${themeOption.value === "light" && "lg:col-span-2"} 
                             ${themeOption.value === "dark" && "lg:col-span-2"} 
-                            rounded-full border-2 border-nftCustom-background hover:border-nftCustom-cta main-transition-color
+                            rounded-full border-2 border-portfolio-card_border hover:border-portfolio-text_secondary main-transition-color
                             `} 
                     >
                         {language("isEnglish") === "true" ? themeOption.nameEn : themeOption.nameFa}

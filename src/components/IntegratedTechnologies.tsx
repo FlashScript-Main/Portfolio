@@ -7,8 +7,8 @@ import Image from "next/image"
 const IntegratedTechnologies = () => {
 
     return (
-        <div className={`max-w-[19.6875rem] md:max-w-[43.125rem] xl:max-w-[65.625rem] mx-auto relative md:h-[75vh] xl:h-[80vh] mb-[1.875rem] md:mb-10 xl:mb-20 |  |  | border-2 border-green-500`}>
-            <DivToScroll className={`md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 | text-white | max-md:grid max-md:grid-cols-2 max-md:place-content-center max-md:gap-4 | w-full h-full border-2 border-orange-500`}>
+        <div className={`max-w-[19.6875rem] md:max-w-[43.125rem] xl:max-w-[65.625rem] mx-auto relative md:h-[75vh] xl:h-[80vh] mb-12 md:mb-16 xl:mb-24 |  |  | `}>
+            <DivToScroll className={`md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 | text-white | max-md:grid max-md:grid-cols-2 max-md:place-content-center max-md:gap-4 | w-full h-full`}>
                 {skillsTechnologiesInfo.map((tech, index) => (
                     <Tooltip 
                         key={tech.id}
@@ -33,7 +33,7 @@ const IntegratedTechnologies = () => {
                             className={`
                                 md:absolute md:top-[50%] md:left-[50%] md:transform md:-translate-x-[50%] md:-translate-y-[50%] 
                                 ${tech.classNames} overflow-hidden cursor-pointer | bg-white |  | 
-                                ${tech.tooltipContent === "FlashScript" ? "max-md:w-20 max-md:h-20 md:w-40 md:h-40 md:xl:w-48 xl:h-48" : "max-md:w-20 max-md:h-20 max-md:mx-auto md:w-24 md:h-24 xl:w-28 xl:h-28"} 
+                                ${tech.tooltipContent === "FlashScript" ? "max-md:hidden md:size-28 lg:size-36 xl:w-48 xl:h-48" : "max-md:w-20 max-md:h-20 max-md:mx-auto md:size-20 lg:size-24 xl:w-28 xl:h-28"} 
                                 group border-4 border-portfolio-card_background hover:border-portfolio-text_secondary rounded-full main-transition-color
                             `}
                         >

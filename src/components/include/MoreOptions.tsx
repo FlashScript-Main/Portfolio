@@ -45,17 +45,17 @@ const MoreOptions = () => {
                 placement="top"
                 backdrop="blur"
                 hideCloseButton
-                className={` | bg-nftCustom-background |  | border-2 border-nftCustom-cta`}
+                className={` | bg-portfolio-card_background |  | border-2 border-portfolio-card_border`}
             >
                 <ModalContent>
                     {(onClose) => (
                         <>
-                        <ModalHeader className={` | text-center text-nftCustom-text text-lg md:text-xl xl:text-2xl font-normal xl:font-semibold ${language("isEnglish") === "false" && `${iranSans}`} selection:text-nftCustom-cta selection:bg-nftCustom-text | flex flex-col gap-1 | `}>
+                        <ModalHeader className={` | text-center text-portfolio-text_secondary text-lg md:text-xl xl:text-2xl font-normal xl:font-semibold ${language("isEnglish") === "false" && `${iranSans}`} selection:text-portfolio-text_secondary selection:bg-portfolio-text_primary | flex flex-col gap-1 | `}>
                             {language("isEnglish") === "true" ? "More Options" : "گزینه های بیشتر"}
                         </ModalHeader>
 
                         <ModalBody>
-                            <div className={` | selection:text-nftCustom-cta selection:bg-nftCustom-text | flex flex-col gap-4 | `}>
+                            <div className={` | selection:text-portfolio-text_secondary selection:bg-portfolio-text_primary | flex flex-col gap-4 | `}>
                                 <div className={` |  | grid grid-cols-1 | `}>
                                     <InstallPWA onClose={onClose} />
 
@@ -68,7 +68,7 @@ const MoreOptions = () => {
                                     </div>
                                 </div>
 
-                                <div className={`py-3 md:py-4 px-4 md:px-6 mb-2 md:mb-3 | bg-nftCustom-text |  | rounded-[20px]`}>
+                                <div className={`py-3 md:py-4 px-4 md:px-6 mb-2 md:mb-3 | bg-portfolio-background |  | rounded-[20px]`}>
                                     <ThemeSwitcher onClose={onClose} />
                                 </div>
                             </div>

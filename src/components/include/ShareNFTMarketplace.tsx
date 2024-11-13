@@ -40,11 +40,11 @@ const ShareNFTMarketplace = () => {
     };
 
     return (
-        <div className={`py-3 md:py-4 px-4 md:px-6 md:mx-auto md:w-6/12 | bg-nftCustom-text ${language("isEnglish") === "false" && `${iranSans}`} | md:col-span-2 | rounded-[20px]`}>
+        <div className={`py-3 md:py-4 px-4 md:px-6 md:mx-auto md:w-6/12 | bg-portfolio-background ${language("isEnglish") === "false" && `${iranSans}`} | md:col-span-2 | rounded-[20px]`}>
             <div className={` |  | flex items-center justify-between gap-2 ${language("isEnglish") === "false" && "flex-row-reverse"} | `}>
-                <h5 className={`my-auto | text-nftCustom-background text-base md:text-lg font-medium |  | ${language("isEnglish") === "false" && `${iranSans} text-end`}`}>
+                <h5 className={`my-auto | text-portfolio-text_primary text-base md:text-lg font-medium |  | ${language("isEnglish") === "false" && `${iranSans} text-end`}`}>
                     <span className={`max-xl:hidden |  |  | `}>
-                        {language("isEnglish") === "true" ? "Share NFT Marketplace" : "اشتراک گذاری بازار توکن دیجیتال"}
+                        {language("isEnglish") === "true" ? "Share My Portfolio" : "اشتراک گذاری نمونه کارهای من"}
                     </span>
 
                     <span className={`xl:hidden |  |  | `}>
@@ -55,19 +55,19 @@ const ShareNFTMarketplace = () => {
                 <div className={` |  | flex items-center gap-2  | `}>
                     <button 
                         onClick={handleCopy}
-                        className={`p-2 px-4 | text-[1rem] leading-[140%] font-semibold bg-nftCustom-cta hover:bg-nftCustom-text | flex justify-center items-center gap-2 | border-2 border-nftCustom-cta rounded-[20px] main-transition-color group ${language("isEnglish") === "false" && "flex-row-reverse"}`}
+                        className={`p-2 px-4 | text-[1rem] leading-[140%] font-semibold bg-portfolio-text_primary hover:bg-portfolio-text_secondary | flex justify-center items-center gap-2 | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color group ${language("isEnglish") === "false" && "flex-row-reverse"}`}
                     >
                         <span>
                         {
                             copied ? 
-                            <div className={`w-5 h-5 | text-nftCustom-text group-hover:text-nftCustom-cta | grid place-content-center | `}>
+                            <div className={`w-5 h-5 | text-portfolio-background group-hover:text-portfolio-card_background | grid place-content-center | `}>
                                 <CheckCheck />
                             </div> 
                             : <CopySVG />
                         }
                     </span>
 
-                        <span className={` | text-nftCustom-text group-hover:text-nftCustom-cta  |  | `}>
+                        <span className={` | text-portfolio-background group-hover:text-portfolio-card_background |  | `}>
                             {language("isEnglish") === "true" ? "Copy" : "کپی"}
                         </span>
                     </button>
@@ -75,13 +75,13 @@ const ShareNFTMarketplace = () => {
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <button 
-                                className={`p-2 max-lg:hidden | text-nftCustom-text hover:text-nftCustom-cta bg-nftCustom-cta hover:bg-nftCustom-text | grid place-content-center | border-2 border-nftCustom-cta rounded-[20px] main-transition-color`}
+                                className={`p-2 max-lg:hidden | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary | grid place-content-center | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
                             >
                                 <QrCode />
                             </button>
                         </DropdownMenuTrigger>
 
-                        <DropdownMenuContent className={`py-4 px-3 | bg-white | flex justify-center items-center gap-4 | border-2 border-nftCustom-cta rounded-[20px]`}>
+                        <DropdownMenuContent className={`py-4 px-3 | bg-white | flex justify-center items-center gap-4 | border-2 border-portfolio-text_secondary rounded-[20px]`}>
                             <QRCodeGenerator value={currentURL} />
                         </DropdownMenuContent>
                     </DropdownMenu>

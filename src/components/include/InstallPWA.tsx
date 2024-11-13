@@ -53,8 +53,8 @@ const InstallPWA = ({ onClose }: { onClose: () => void }) => {
     return (
         <div className={`${installPromptEvent && "mb-4 md:mx-auto"} | ${language("isEnglish") === "false" && `${iranSans}`} |  | `}>
             {installPromptEvent && (
-              <div className={`py-3 md:py-4 px-4 md:px-6 | bg-nftCustom-text | flex items-center max-md:justify-between gap-2 md:gap-4 lg:gap-6 xl:gap-8 | rounded-[20px] ${language("isEnglish") === "false" && "flex-row-reverse"}`}>
-                  <h5 className={`my-auto | text-nftCustom-background text-base md:text-lg font-medium |  | `}>
+              <div className={`py-3 md:py-4 px-4 md:px-6 | bg-portfolio-background | flex items-center max-md:justify-between gap-2 md:gap-4 lg:gap-6 xl:gap-8 | rounded-[20px] ${language("isEnglish") === "false" && "flex-row-reverse"}`}>
+                  <h5 className={`my-auto | text-portfolio-text_primary text-base md:text-lg font-medium |  | `}>
                     <span className={`max-md:hidden |  |  | `}>
                       {language("isEnglish") === "true" ? "Install NFT Marketplace Application" : "بازار توکن دیجیتال را نصب کنید"}
                     </span>
@@ -66,7 +66,7 @@ const InstallPWA = ({ onClose }: { onClose: () => void }) => {
 
                   <button 
                       onClick={handleInstallClick}
-                      className={`p-1 md:p-2 | text-nftCustom-text hover:text-nftCustom-cta bg-nftCustom-cta hover:bg-nftCustom-text | grid place-content-center | border-2 border-nftCustom-cta rounded-full main-transition-color`}
+                      className={`p-1 md:p-2 | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary | grid place-content-center | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-full main-transition-color`}
                   >
                     <MonitorSmartphone />
                   </button>

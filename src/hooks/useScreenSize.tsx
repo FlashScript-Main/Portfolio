@@ -9,7 +9,10 @@ const useScreenSize = () => {
     const xl = useMedia('(min-width: 1280px) and (max-width: 1440px)');
     const xxl = useMedia('(min-width: 1440px)');
 
+    const specificHeight = useMedia("(min-height: 900px)");
+
     return {
+        specificHeight,
         xs,
         sm,
         md,

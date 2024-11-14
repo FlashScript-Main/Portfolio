@@ -352,6 +352,14 @@ export const skillsInfo = {
   descriptionFa: "در دنیای فنی من گشت و گذار کنید، جایی که مهارت‌ها به دور هسته تخصص در گردش هستند. هر چه یک مهارت به مرکز نزدیک‌تر باشد، تسلط من عمیق‌تر است. این نمایش پویا، عمق و گستره توانایی‌های توسعه من را نشان می‌دهد",
 }
 
+export const projectsInfo = {
+  titleEn: "Bringing Ideas to Life",
+  titleFa: "تبدیل ایده‌ها به واقعیت",
+  descriptionEn: "Welcome to my projects showcase. Here, You'll find a curated selection of my work that demonstrates my passion for creating intuitive, responsive, and visually appealing web experiences. Each project represents a unique challenge and a opportunity to push the boundaries of front-end development.",
+  descriptionFa: "به نمایشگاه پروژه‌های من خوش آمدید. در اینجا، مجموعه‌ای گزیده از کارهای من را خواهید یافت که نشان‌دهنده اشتیاق من برای ایجاد تجربیات وب بدیهی، واکنش‌گرا و جذاب از نظر بصری است. هر پروژه نشان‌دهنده یک چالش منحصر به فرد و فرصتی برای گسترش مرزهای توسعه فرانت‌اند است",
+  projects: [],
+}
+
 export const skillsTechnologiesInfo = [
   {
       id: 1,

@@ -16,7 +16,7 @@ const ProjectsPage = () => {
         <GlobalMotionMain className={`overflow-x-hidden |  |  | ${isFarsi && `${iranSans}`}`}>
             <Navbar place="projects" />
 
-            <SectionToScroll className={`max-w-[380px] mt-28 mb-12 md:mb-0 lg:mb-8 xl:mb-16 md:mt-32 md:max-w-[730px] lg:max-w-[900px] xl:w-[1200px] 2xl:w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"} border-2 border-rose-600`}>
+            <SectionToScroll className={`max-w-[380px] mt-28 mb-12 md:mb-0 lg:mb-8 xl:mb-16 md:mt-32 md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"} border-2 border-rose-600`}>
                 <MotionH1 
                     initial="hidden"
                     whileInView="reveal"

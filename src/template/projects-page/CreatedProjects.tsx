@@ -2,6 +2,9 @@ import { MotionDiv } from "@/animations/motion-provider"
 import { DivToScroll } from "@/animations/ScrollAnimations"
 import { projectsInfo } from "@/constant"
 import useLanguage from "@/hooks/useLanguage";
+import { spaceMono } from "@/utils/fonts";
+import { Github, Link } from "lucide-react";
+import Image from "next/image";
 
 const CreatedProjects = () => {
 
@@ -9,112 +12,79 @@ const CreatedProjects = () => {
 
     return (
         <div className={`mt-[3.5rem] h-screen |  |  | `}>
-            <DivToScroll className={` |  | grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[1.875rem] | `}>
-                {projectsInfo.projects.map((card, index) => (
-                    <MotionDiv
-                        initial={{ y: "20%", opacity: 0, }}
-                        whileInView={{ y: "0%", opacity: 1, }}
-                        transition={{ delay: 0.025 * (index + 0.025), duration: 0.5, ease: "easeInOut", }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        key={card.id}
-                        className={`overflow-hidden |  |  | rounded-[20px] group `}
-                    >
-                        <a 
-                            href={`${language("isEnglish") === "true" ? `/en/marketplace` : `/fa/marketplace`}`}
+            <DivToScroll className={`mt-4 md:mt-8 xl:mt-10 |  | grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[1.875rem] | border-2 border-green-600`}>
+                    {projectsInfo.projects.map((card, index) => (
+                        <MotionDiv
+                            initial={{ y: "20%", opacity: 0, }}
+                            whileInView={{ y: "0%", opacity: 1, }}
+                            transition={{ delay: 0.025 * (index + 0.025), duration: 0.5, ease: "easeInOut", }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            key={index}
+                            className={`overflow-hidden |  |  | rounded-[20px] group transition-all`}
                         >
-                            <div className={`w-[19.6875rem] h-[14.875rem] md:w-[20.625rem] md:h-[18.4375rem] overflow-hidden |  |  | `}>
-                                <Image 
-                                    src={`/${card.image}`}
-                                    alt={`${card.titleEn} Image`}
-                                    width={330}
-                                    height={295}
-                                    className={`max-md:w-[19.6875rem] max-md:h-[14.875rem] md:w-full object-cover |  |  | group-hover:scale-110 duration-500 transition-transform`}
-                                />
-                            </div>
-    
-                            <div className={`px-5 pt-5 pb-6 | bg-nftCustom-background | flex flex-col gap-[1.5625rem] | `}>
-                                <div>
-                                    <MotionH5 
-                                        initial={{ x: "20%", opacity: 0 }}
-                                        whileInView={{ x: "0%", opacity: 1 }}
-                                        viewport={{ once: true, margin: "-50px" }}
-                                        transition={{ staggerChildren: 0.02, delay: 0.025 * (index + 0.05), duration: 0.5 }}
-                                        className={`mb-[0.3125rem] | text-nftCustom-text group-hover:text-nftCustom-cta text-[1.375rem] font-semibold capitalize |  | main-transition-color ${language("isEnglish") === "false" && "text-end"}`}
-                                    >
-                                        {language("isEnglish") === "true" ? card.titleEn : card.titleFa}
-                                    </MotionH5>
-    
-                                    <MotionDiv
-                                        initial={{ x: "-20%", opacity: 0 }}
-                                        whileInView={{ x: "0%", opacity: 1 }}
-                                        viewport={{ once: true, margin: "-50px" }}
-                                        transition={{ staggerChildren: 0.02, delay: 0.025 * (index + 0.075), duration: 0.5 }} 
-                                        className={` |  | flex items-center gap-3 | ${language("isEnglish") === "true" ? "justify-start" : "justify-end"}`}
-                                    >
-                                        <Image 
-                                            src={`/${artist.avatar}`}
-                                            alt={`${artist.artistNameEn} Avatar`}
-                                            width={300}
-                                            height={300}
-                                            className={`w-6 h-6 object-cover rounded-full |  |  | `}
-                                        />
-    
-                                        <span className={` | text-nftCustom-text text-base font-normal ${spaceMono} |  | `}>
-                                            {artist.artistNameEn}
-                                        </span>
-                                    </MotionDiv>
+                            <a 
+                                href={`${card.websiteLink}`}
+                                target="_blank"
+                            >
+                                <div className={`overflow-hidden w-full h-[20rem] object-top |  |  | `}>
+                                    <Image 
+                                        src={`/projects/${isEnglish ? card.imageEn : card.imageFa}`}
+                                        alt={`${card.titleEn} Image`}
+                                        width={1000}
+                                        height={1000}
+                                        className={`md:w-full h-full object-cover object-top |  |  | group-hover:scale-110 duration-500 transition-transform`}
+                                    />
                                 </div>
-    
-                                <div className={` |  | flex flex-col gap-2 md:gap-[0.4rem] | `}>
-                                    <div className={` |  | flex justify-between items-center | ${language("isEnglish") === "false" && "flex-row-reverse"}`}>
-                                        <MotionP
+
+                                <div className={`w-full h-[5rem] xl:h-[5.75rem] relative | bg-portfolio-card_background | flex flex-col justify-center items-center gap-[1.5625rem] | `}>
+                                    <div className={` |  |  | group-hover:opacity-0 opacity-100 transition-all`}>
+                                        <MotionDiv
                                             initial={{ x: "-20%", opacity: 0 }}
                                             whileInView={{ x: "0%", opacity: 1 }}
                                             viewport={{ once: true, margin: "-50px" }}
-                                            transition={{ staggerChildren: 0.02, delay: 0.025 * (index + 0.075), duration: 0.5, ease: "easeIn" }} 
-                                            className={` | text-nftCustom-c_l_text text-xs font-normal ${spaceMono} |  | `}
+                                            transition={{ staggerChildren: 0.02, delay: 0.025 * (index + 0.075), duration: 0.5 }} 
+                                            className={`px-4 |  | flex items-center justify-center gap-3 | ${isEnglish ? "justify-start" : "justify-end flex-row-reverse"}`}
                                         >
-                                            {language("isEnglish") === "true" ? "Price" : "قیمت"}
-                                        </MotionP>
-    
-                                        <MotionP 
-                                            initial={{ x: "-20%", opacity: 0 }}
-                                            whileInView={{ x: "0%", opacity: 1 }}
-                                            viewport={{ once: true, margin: "-50px" }}
-                                            transition={{ staggerChildren: 0.02, delay: 0.05 * (index + 0.075), duration: 0.5, ease: "easeIn" }} 
-                                            className={` | text-nftCustom-c_l_text text-xs font-normal ${spaceMono} |  | `}
-                                        >
-                                            {language("isEnglish") === "true" ? "Highest Bid" : "بالاترین پیشنهاد"}
-                                        </MotionP>
+                                            <Image 
+                                                src={`/projects/${card.favicon}`}
+                                                alt={`${card.titleEn} Favicon`}
+                                                width={300}
+                                                height={300}
+                                                className={`size-10 object-cover rounded-full |  |  | `}
+                                            />
+
+                                            <span className={` | text-portfolio-text_secondary text-base xl:text-lg font-semibold ${spaceMono} line-clamp-1 |  | `}>
+                                                {isEnglish ? card.titleEn : card.titleFa}
+                                            </span>
+                                        </MotionDiv>
                                     </div>
-    
-                                    <div className={` |  | flex justify-between items-center | ${language("isEnglish") === "false" && "flex-row-reverse"}`}>
-                                        <MotionSpan 
-                                            initial={{ y: "20%", opacity: 0 }}
-                                            whileInView={{ y: "0%", opacity: 1 }}
-                                            viewport={{ once: true, margin: "-50px" }}
-                                            transition={{ staggerChildren: 0.02, delay: 0.075 * (index + 0.075), duration: 0.5, ease: "easeInOut" }} 
-                                            className={` | text-nftCustom-text text-xs md:text-base font-normal ${spaceMono} |  | `}
+
+                                    <div className={`absolute inset-0 w-full h-full group-hover:opacity-100 opacity-0 transition-all |  | flex justify-center items-center ${isFarsi && "flex-row-reverse"} gap-4 | `}>
+                                        <a 
+                                            href={`${card.websiteLink}`}
+                                            target="_blank"
+                                            className={`py-2 px-4 | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary text-base font-normal | flex ${isFarsi && "flex-row-reverse"} items-center gap-2 | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
                                         >
-                                            {card.price} ETH
-                                        </MotionSpan>
-    
-                                        <MotionSpan 
-                                            initial={{ y: "20%", opacity: 0 }}
-                                            whileInView={{ y: "0%", opacity: 1 }}
-                                            viewport={{ once: true, margin: "-50px" }}
-                                            transition={{ staggerChildren: 0.02, delay: 0.075 * (index + 0.075), duration: 0.5, ease: "easeInOut" }} 
-                                            className={` | text-nftCustom-text text-xs md:text-base font-normal ${spaceMono} |  | `}
+                                            <span><Link /></span>
+
+                                            <span>{isEnglish ? "Website" : "وب‌سایت"}</span>
+                                        </a>
+
+                                        <a 
+                                            href={`${card.githubLink}`}
+                                            target="_blank"
+                                            className={`py-2 px-4 | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary text-base font-normal | flex ${isFarsi && "flex-row-reverse"} items-center gap-2 | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
                                         >
-                                            {card.highestBid} wETH
-                                        </MotionSpan>
+                                            <span><Github /></span>
+
+                                            <span>{isEnglish ? "Github" : "گیت‌هاب"}</span>
+                                        </a>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </MotionDiv>
-                ))}
-            </DivToScroll>
+                            </a>
+                        </MotionDiv>
+                    ))}
+                </DivToScroll>
         </div>
     )
 

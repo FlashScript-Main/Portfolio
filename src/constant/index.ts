@@ -357,7 +357,20 @@ export const projectsInfo = {
   titleFa: "تبدیل ایده‌ها به واقعیت",
   descriptionEn: "Welcome to my projects showcase. Here, You'll find a curated selection of my work that demonstrates my passion for creating intuitive, responsive, and visually appealing web experiences. Each project represents a unique challenge and a opportunity to push the boundaries of front-end development.",
   descriptionFa: "به نمایشگاه پروژه‌های من خوش آمدید. در اینجا، مجموعه‌ای گزیده از کارهای من را خواهید یافت که نشان‌دهنده اشتیاق من برای ایجاد تجربیات وب بدیهی، واکنش‌گرا و جذاب از نظر بصری است. هر پروژه نشان‌دهنده یک چالش منحصر به فرد و فرصتی برای گسترش مرزهای توسعه فرانت‌اند است",
-  projects: [],
+  projects: [
+    {
+      id: 1,
+      titleEn: "NFT Marketplace",
+      titleFa: "بازار توکن دیجیتال",
+      imageEn: "nft-marketplace-en.jpg",
+      imageFa: "nft-marketplace-fa.jpg",
+      favicon: "nft-logo.png",
+      githubLink: "https://github.com/FlashScript-Main/NFT_Marketplace",
+      websiteLink: "https://nft-marketplace---flash-script.vercel.app/en",
+      hasVideo: true,
+      videoSrc: "",
+    }
+  ],
 }
 
 export const skillsTechnologiesInfo = [

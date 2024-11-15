@@ -54,7 +54,9 @@ const ProjectsPage = () => {
                 </MotionP>
             </SectionToScroll>
 
-            <CreatedProjects />
+            <SectionToScroll className={`max-w-[380px] mt-28 mb-12 md:mb-0 lg:mb-8 xl:mb-16 md:mt-32 md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"} border-2 border-indigo-500`}>
+                <CreatedProjects />
+            </SectionToScroll>
         </GlobalMotionMain>
     )
 

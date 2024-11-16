@@ -41,7 +41,7 @@ export default async function RootLayout({
                     <ThemeProvider 
                         attribute="class"
                         disableTransitionOnChange
-                        defaultTheme="nftDefault"
+                        defaultTheme="default"
                         enableSystem={false}
                         themes={nftMarketplaceThemes}
                     >

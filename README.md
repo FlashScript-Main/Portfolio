@@ -1,4 +1,4 @@
-❤️🔥🔗[Live Website](https://flashscript-skilledelearning.netlify.app)🔗🔥❤️
+❤️🔥🔗[Live Website](https://flashscript.vercel.app/en)🔗🔥❤️
 
 # FlashScript Portfolio ⚡
 ![Home Page](./public/readme-image.jpg)

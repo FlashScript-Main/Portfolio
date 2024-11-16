@@ -294,14 +294,14 @@ export const home_contactIcons = [
   { 
       id: 2,
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/flashscript-main/",
+      href: "https://www.linkedin.com/in/flashscript-main",
       classNamesEn: "md:max-lg:-ml-[1rem] md:max-lg:mt-[1.3rem] xl:ml-[3rem] xl:-mt-[2.3rem] 2xl:ml-[4rem]",
       classNamesFa: "md:max-lg:-ml-[2rem] md:max-lg:mt-[1.3rem] xl:ml-[2rem] xl:-mt-[2.3rem] 2xl:ml-[2rem]"
   },
   { 
       id: 3,
       icon: Mail,
-      href: "mailto:flashscriptmain@gmail.com",
+      href: "mailto:contact.flashscript@gmail.com",
       classNamesEn: "md:max-lg:ml-[2.5rem] md:max-lg:-mt-[0.3rem] xl:mt-[1rem] xl:ml-[0.6rem]",
       classNamesFa: "md:max-lg:ml-[1.5rem] md:max-lg:-mt-[0.3rem] xl:mt-[1rem] xl:-ml-[0.5rem]"
   },
@@ -320,14 +320,14 @@ export const navbarIcons = [
       icon: Linkedin,
       nameEn: "LinkedIn",
       nameFa: "لینکدین",
-      href: "https://www.linkedin.com/in/flashscript-main/",
+      href: "https://www.linkedin.com/in/flashscript-main",
   },
   {
       id: 3,
       icon: Mail,
       nameEn: "Send Email",
       nameFa: "ارسال ایمیل",
-      href: "mailto:flashscriptmain@gmail.com",
+      href: "mailto:contact.flashscript@gmail.com",
   },
 ];
 

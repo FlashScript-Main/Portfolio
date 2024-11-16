@@ -17,15 +17,6 @@ const nextConfig = {
     // typescript: {
     //     ignoreBuildErrors: true,
     // },
-    
-    // images: {
-    //     remotePatterns: [
-    //         {
-    //             protocol: "https",
-    //             hostname: "ipfs.io",
-    //         },
-    //     ]
-    // }
 };
 
 export default isProduction ? withNextIntl(withPWA({

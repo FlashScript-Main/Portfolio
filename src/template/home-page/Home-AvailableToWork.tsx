@@ -18,7 +18,7 @@ const AvailableToWork = () => {
     const { toast } = useToast();
 
     const handleCopy = () => {
-        const textToCopy = "FlashScript {⚡}";
+        const textToCopy = "contact.flashscript@gmail.com";
 
         navigator.clipboard.writeText(textToCopy)
             .then(() => {

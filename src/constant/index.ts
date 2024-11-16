@@ -238,7 +238,7 @@ export const home_SkillsIcons = [
     },
     {
         id: 9,
-        src: "shadcn-light.png",
+        src: "shadcn.png",
         alt: "ShadCN",
         classNames: "max-md:hidden md:mt-[4.2rem] md:ml-[6rem] xl:mt-[4.5rem] 2xl:mt-[5.5rem] 2xl:ml-[8rem]"
     },

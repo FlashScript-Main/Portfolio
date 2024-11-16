@@ -29,8 +29,8 @@ export const customThemes = [
         value: "default", 
         nameEn: "Default",
         nameFa: "پیش فرض",
-        bgColor: "bg-gradient-to-r from-[#2B2B2B] to-[#3B3B3B]",
-        textColor: "text-[#A259FF]" 
+        bgColor: "bg-gradient-to-r from-[#fbc038] to-[#e96b0c]",
+        textColor: "text-[#d63554]" 
     },
     { 
         value: "light", 
@@ -175,30 +175,16 @@ export const customThemes = [
 ];
 
 export const metadataValues = {
-    homeTitleEn: "NFT Marketplace",
-    homeTitleFa: "بازار توکن دیجیتال",
-    homeDescriptionEn: "Welcome to the NFT Marketplace, where you can discover modern and popular NFTs across a wide range of categories. Browse, bid, and buy unique digital assets, each crafted by talented artists from around the world. Experience the future of digital ownership and become part of a vibrant community of NFT enthusiasts.",
-    homeDescriptionFa: "به بازار توکن دیجیتال خوش آمدید، جایی که می‌توانید توکن‌های دیجیتال مدرن و محبوب را در دسته‌بندی‌های مختلف کشف کنید. مرور کنید، پیشنهاد دهید و دارایی‌های دیجیتال منحصر به فرد را خریداری کنید که توسط هنرمندان بااستعداد از سراسر جهان خلق شده‌اند. آینده مالکیت دیجیتال را تجربه کنید و بخشی از جامعه پویای علاقه‌مندان به توکن‌های دیجیتال شوید",
-    rankingsTitleEn: "NFT Marketplace | Rankings",
-    rankingsTitleFa: "بازار توکن دیجیتال | رتبه‌بندی‌ها",
+    homeTitleEn: "FlashScript",
+    homeTitleFa: "فلش‌اسکریپت",
+    homeDescriptionEn: "Welcome to the FlashScript Portfolio, where you can Find and Explore the latest technologies and projects that are shaping the future of the web built by FlashScript.",
+    homeDescriptionFa: "به پورتفولیوی فلش اسکریپت خوش آمدید، جایی که می‌توانید جدیدترین فناوری‌ها و پروژه‌هایی را که آینده وب را شکل می‌دهند و توسط فلش اسکریپت ساخته شده‌اند، پیدا کرده و کاوش کنید",
+    skillsTitleEn: "FlashScript | Skills",
+    skillsTitleFa: "فلش‌اسکریپت | مهارت‌ها",
+    projectsTitleEn: "FlashScript | Projects",
+    projectsTitleFa: "فلش‌اسکریپت | پروژه ها",
     notFoundTitleEn: "404 | Page Not Found",
     notFoundTitleFa: "404 | صفحه پیدا نشد",
-    dashboardTitleEn: "NFT Marketplace | Dashboard",
-    dashboardTitleFa: "بازار توکن دیجیتال | داشبورد",
-    nftTitleEn: "NFT Marketplace | NFT - ",
-    nftTitleFa: "بازار توکن دیجیتال | توکن - ",
-    marketplaceTitleEn: "NFT Marketplace | Marketplace",
-    marketplaceTitleFa: "بازار توکن دیجیتال | بازار",
-    flashScriptTitleEn: "NFT Marketplace | Technologies",
-    flashScriptTitleFa: "بازار توکن دیجیتال | فناوری‌ها",
-    artistTitleEn: "NFT Marketplace | Artist - ",
-    artistTitleFa: "بازار توکن دیجیتال | هنرمند - ",
-    connectWalletTitleEn: "NFT Marketplace | Wallet",
-    connectWalletTitleFa: "بازار توکن دیجیتال | کیف پول",
-    createAccountTitleEn: "NFT Marketplace | Create Account",
-    createAccountTitleFa: "بازار توکن دیجیتال | ایجاد حساب",
-    categoryTitleEn: "NFT Marketplace | Category - ",
-    categoryTitleFa: "بازار توکن دیجیتال | دسته بندی - ",
 }
 
 export const home_SkillsIcons = [

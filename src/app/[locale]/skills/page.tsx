@@ -4,9 +4,17 @@ import { GlobalMotionMain } from "@/animations/MotionAnimations"
 import { SectionToScroll } from "@/animations/ScrollAnimations"
 import { IntegratedTechnologies } from "@/components"
 import Navbar from "@/components/Navbar"
-import { skillsInfo } from "@/constant"
+import { metadataValues, skillsInfo } from "@/constant"
 import useLanguage from "@/hooks/useLanguage"
 import { iranSans, spaceMono } from "@/utils/fonts"
+
+export const generateMetadata = async ({ params: { locale } }: MainPagePropsType) => {
+    
+    return {
+        title: locale === "en" ? metadataValues.skillsTitleEn : metadataValues.skillsTitleFa,
+    }
+  
+}
 
 const SkillsPage = () => {
 

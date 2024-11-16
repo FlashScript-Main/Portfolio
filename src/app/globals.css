@@ -88,19 +88,25 @@
 
 /* Light Theme */
 .light {
-  --nft-background: #FFFFFF;
-  --nft-background-secondary: #F4F4F4;
+  --portfolio-background: #FFFFFF;
+  --portfolio-card-background: #00B050;
+  --portfolio-card-border: #FF4D4F;
+  --portfolio-text-primary: #000000;
+  --portfolio-text-secondary: #0066FF;
+
+  --nft-background: ;
+  --nft-background-secondary: ;
   --nft-c-l-text: #333333;
-  --nft-text: #000000;
-  --nft-cta: #0066FF;
+  --nft-text: ;
+  --nft-cta: ;
   --nft-text-accent: #666666;
   --nft-blue-accent: #0056D2;
-  --nft-red-accent: #FF4D4F;
+  --nft-red-accent: ;
   --nft-header-bg: #FFFFFF;
   --nft-footer-bg: #F1F1F1;
   --nft-countdown-bg: 244, 244, 244;
   --nft-create-account-svg: #B3B3B3;
-  --nft-rankings-change: #00B050;
+  --nft-rankings-change: ;
 }
 
 /* Dark Theme */

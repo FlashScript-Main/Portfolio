@@ -31,7 +31,7 @@ const CreatedProjects = () => {
             className={`mt-[3.5rem] |  |  | `} 
             style={{ direction: `${isEnglish ? "ltr" : "rtl"}`}}
         >
-            <DivToScroll className={`mt-4 md:mt-8 xl:mt-10 |  | grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[1.875rem] | border-2 border-green-600`}>
+            <DivToScroll className={`mt-4 md:mt-8 xl:mt-10 |  | grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-[1.875rem] | `}>
                 {projectsInfo.projects.slice(0, nftCount).map((card, index) => (
                     <MotionDiv
                         initial={{ y: "20%", opacity: 0, }}
@@ -47,7 +47,7 @@ const CreatedProjects = () => {
                             href={`${card.websiteLink}`}
                             target="_blank"
                         >
-                            <div className={`overflow-hidden relative w-full h-[20rem] object-top |  |  | `}>
+                            <div className={`overflow-hidden relative w-full h-[17rem] lg:h-[20rem] object-top |  |  | `}>
                                 <Image 
                                     src={`/projects/${card.image}`}
                                     alt={`${card.titleEn} Image`}
@@ -89,7 +89,7 @@ const CreatedProjects = () => {
                                     </MotionDiv>
                                 </div>
 
-                                <div className={`px-8 absolute inset-0 w-full h-full group-hover:opacity-100 opacity-0 transition-all |  | flex justify-between items-center | `}>
+                                <div className={`px-8 lg:max-xl:px-2 absolute inset-0 w-full h-full group-hover:opacity-100 opacity-0 transition-all |  | flex justify-between items-center | `}>
                                     <a 
                                         href={`${card.websiteLink}`}
                                         target="_blank"
@@ -122,7 +122,7 @@ const CreatedProjects = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ staggerChildren: 0.02, delay: 0.75, duration: 0.25 }}
                 onClick={() => setNftCount((value: number) => value + 7)}
-                className={`max-md:w-full py-3 mt-10 md:mx-auto md:px-5 xl:px-6 ${nftCount >= 9 && "hidden"} | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary text-base font-medium | flex items-center justify-center gap-3 | group border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
+                className={`max-md:px-4 py-3 mb-8 mt-10 lg:mt-14 mx-auto md:px-5 xl:px-6 ${nftCount >= 9 && "hidden"} | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary text-base font-medium | flex items-center justify-center gap-3 | group border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
             >
                 <Plus className={` | text-portfolio-background group-hover:text-portfolio-card_background |  | group-hover:rotate-180 transition-all`} />
 
@@ -135,10 +135,10 @@ const CreatedProjects = () => {
                 initial={{ x: "20%", opacity: 0 }}
                 whileInView={{ x: "0%", opacity: 1 }}
                 viewport={{ once: true, margin: "-20px" }}
-                transition={{ delay: 0.5, duration: 0.25, ease: "easeInOut" }}
-                className={`w-11/12 max-w-[380px] p-4 mx-auto mb-8 | bg-portfolio-text_secondary text-center | ${nftCount >= 9 ? "" : "hidden"} | rounded-[20px]`}
+                transition={{ delay: 1, duration: 0.25, ease: "easeInOut" }}
+                className={`w-11/12 max-w-[380px] p-4 mx-auto mb-8 mt-6 lg:mt-8 | bg-portfolio-text_secondary text-center | ${nftCount >= 9 ? "" : "hidden"} | rounded-[20px]`}
             >
-                <span className={` | text-xs text-portfolio-text_primary capitalize font-semibold |  | `}>
+                <span className={` | text-xs md:text-sm text-portfolio-text_primary capitalize font-semibold |  | `}>
                     {isEnglish ? "Hover over each card to reveal more details" : "بر روی هر کارت نگه دارید تا جزئیات بیشتری نشان داده شود"}
                 </span>
             </MotionDiv>

@@ -3,20 +3,28 @@ import { charVariants } from "@/animations/motion-variants";
 import { GlobalMotionMain } from "@/animations/MotionAnimations";
 import { SectionToScroll } from "@/animations/ScrollAnimations";
 import Navbar from "@/components/Navbar"
-import { projectsInfo } from "@/constant";
+import { metadataValues, projectsInfo } from "@/constant";
 import useLanguage from "@/hooks/useLanguage";
 import CreatedProjects from "@/template/projects-page/CreatedProjects";
 import { iranSans } from "@/utils/fonts";
+
+export const generateMetadata = async ({ params: { locale } }: MainPagePropsType) => {
+    
+    return {
+        title: locale === "en" ? metadataValues.projectsTitleEn : metadataValues.projectsTitleFa,
+    }
+  
+}
 
 const ProjectsPage = () => {
 
     const { isEnglish, isFarsi } = useLanguage();
 
     return (
-        <GlobalMotionMain className={`overflow-x-hidden |  |  | ${isFarsi && `${iranSans}`}`}>
+        <GlobalMotionMain className={`overflow-x-hidden min-h-screen |  |  | ${isFarsi && `${iranSans}`}`}>
             <Navbar place="projects" />
 
-            <SectionToScroll className={`max-w-[380px] mt-28 mb-12 md:mb-0 lg:mb-8 xl:mb-16 md:mt-32 md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"} border-2 border-rose-600`}>
+            <SectionToScroll className={`mt-28 md:mt-32 max-w-[380px] md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"}`}>
                 <MotionH1 
                     initial="hidden"
                     whileInView="reveal"
@@ -45,7 +53,7 @@ const ProjectsPage = () => {
                     {(isEnglish ? projectsInfo.descriptionEn : projectsInfo.descriptionFa).split("").map(char => (
                         <MotionSpan
                             key={char}
-                            transition={{ duration: 0.25 }}
+                            transition={{ duration: 0.05 }}
                             variants={charVariants}
                         >
                             {char}
@@ -54,7 +62,7 @@ const ProjectsPage = () => {
                 </MotionP>
             </SectionToScroll>
 
-            <SectionToScroll className={`max-w-[380px] mt-28 mb-12 md:mb-0 lg:mb-8 xl:mb-16 md:mt-32 md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-sm:px-4 mx-auto |  |  | ${isFarsi && "text-end"} border-2 border-indigo-500`}>
+            <SectionToScroll className={`mt-4 xl:mt-8 max-w-[380px] md:max-w-[730px] lg:max-w-[900px] xl:max-w-[1200px] 2xl:max-w-[1500px] max-md:px-4 mx-auto |  |  | ${isFarsi && "text-end"}`}>
                 <CreatedProjects />
             </SectionToScroll>
         </GlobalMotionMain>

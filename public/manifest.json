@@ -1,8 +1,8 @@
 {
     "id": "1",
-    "name": "NFT Marketplace",
-    "short_name": "NFT Marketplace",
-    "description": "This is a Next.js 14 App Compatible with PWA",
+    "name": "FlashScript Portfolio",
+    "short_name": "FlashScript",
+    "description": "This is a FlashScript Portfolio App Compatible with PWA",
     "icons": [
       {
         "src": "/pwa-192.png",

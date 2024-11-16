@@ -2,9 +2,10 @@ import { MotionDiv, MotionH1, MotionH2, MotionP, MotionSpan } from "@/animations
 import { charVariants } from "@/animations/motion-variants";
 import { GlobalMotionMain } from "@/animations/MotionAnimations";
 import { SectionToScroll } from "@/animations/ScrollAnimations";
+import { Navbar } from "@/components";
 import { metadataValues } from "@/constant";
+import useLanguage from "@/hooks/useLanguage";
 import { iranSans } from "@/utils/fonts";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export const generateMetadata = async ({ params: { locale } }: MainPagePropsType) => {
@@ -17,18 +18,18 @@ export const generateMetadata = async ({ params: { locale } }: MainPagePropsType
 
 const NotFoundPage = () => {
 
-    const translateNotFound = useTranslations('NotFound');
-    const language = useTranslations("language");
+    const { isEnglish, isFarsi} = useLanguage();
 
     return (
-        <GlobalMotionMain className={`overflow-x-hidden | selection:text-nftCustom-cta selection:bg-nftCustom-text |  | ${language("isEnglish") === "false" && `${iranSans}`}`}>
-            <SectionToScroll className={`max-w-[19.6875rem] md:max-w-[43.125rem] xl:max-w-[65.625rem] mx-auto py-[1.875rem] md:py-10 xl:py-20 |  |  | ${language("isEnglish") === "false" && "text-end"}`}>
+        <GlobalMotionMain className={`overflow-x-hidden w-full h-screen | selection:text-portfolio-text_secondary selection:bg-portfolio-text_primary | grid place-content-center | ${isFarsi && `${iranSans}`}`}>
+            <Navbar place="projects" />
+            <SectionToScroll className={`max-w-[19.6875rem] md:max-w-[43.125rem] xl:max-w-[65.625rem] mx-auto py-[1.875rem] md:py-10 xl:py-20 |  |  | ${isFarsi && "text-end"}`}>
                 <MotionH1
                     initial={{ y: "20%", opacity: 0 }}
                     whileInView={{ y: "0%", opacity: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.75, ease: "easeInOut" }}
-                    className={`mb-8 md:mb-10 xl:mb-12 | text-center text-nftCustom-cta text-6xl md:text-7xl xl:text-9xl font-semibold |  | `}
+                    className={`mb-8 md:mb-10 xl:mb-12 | text-center text-portfolio-text_secondary text-6xl md:text-7xl xl:text-9xl font-semibold |  | `}
                 >
                     404
                 </MotionH1>
@@ -38,9 +39,9 @@ const NotFoundPage = () => {
                     whileInView="reveal"
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ staggerChildren: 0.02, delay: 1.5 }} 
-                    className={`mb-[0.625rem] md:mb-5 | text-nftCustom-text text-[1.75rem] md:text-[2.375rem] xl:text-[3.1875rem] leading-[140%] md:leading-[120%] xl:leading-[110%] font-semibold |  | `}
+                    className={`mb-[0.625rem] md:mb-5 | text-portfolio-text_primary text-[1.75rem] md:text-[2.375rem] xl:text-[3.1875rem] leading-[140%] md:leading-[120%] xl:leading-[110%] font-semibold |  | `}
                 >
-                    {translateNotFound("title").split("").map(char => (
+                    {(isEnglish ? "Page Not Found" : "صفحه پیدا نشد").split("").map(char => (
                         <MotionSpan
                             key={char}
                             transition={{ duration: 1.75 }}
@@ -56,9 +57,9 @@ const NotFoundPage = () => {
                     whileInView="reveal"
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ staggerChildren: 0.02, delay: 1.5 }}
-                    className={` | text-nftCustom-text text-[1rem] xl:text-[1.375rem] leading-[140%] xl:leading-[160%] font-normal |  | `}
+                    className={` | text-portfolio-card_background text-[1rem] xl:text-[1.375rem] leading-[140%] xl:leading-[160%] font-normal |  | `}
                 >
-                    {translateNotFound("description").split("").map(char => (
+                    {(isEnglish ? "Sorry, the page you're looking for doesn't exist. Please check the URL or go back to the Homepage." : "متاسفیم، صفحه‌ای که به دنبال آن هستید وجود ندارد. لطفاً آدرس را بررسی کنید یا به صفحه اصلی بازگردید").split("").map(char => (
                         <MotionSpan
                             key={char}
                             transition={{ duration: 1 }}
@@ -74,13 +75,13 @@ const NotFoundPage = () => {
                     whileInView={{ x: "0%", opacity: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.75, ease: "easeInOut" }}
-                    className={`mb-4 |  |  | ${language("isEnglish") === "true" ? "mt-8" : "max-md:mt-8 mt-12"}`}
+                    className={`mb-4 |  |  | ${isEnglish ? "mt-8" : "max-md:mt-8 mt-12"}`}
                 >
                     <Link
-                        href={`/${language("isEnglish") === "true" ? "en" : "fa"}/`}
-                        className={`mx-auto w-fit px-4 xl:px-5 py-3 xl:py-4 | text-nftCustom-cta hover:text-nftCustom-text text-lg xl:text-xl font-semibold bg-nftCustom-text hover:bg-nftCustom-cta | grid | rounded-[20px] main-transition-color`}
+                        href={`/${isEnglish ? "en" : "fa"}/`}
+                        className={`mx-auto w-fit px-4 xl:px-5 py-3 xl:py-4 | text-portfolio-background hover:text-portfolio-card_background bg-portfolio-text_primary hover:bg-portfolio-text_secondary text-lg xl:text-xl font-semibold | grid | border-2 border-portfolio-card_border hover:border-portfolio-text_primary rounded-[20px] main-transition-color`}
                     >
-                        {translateNotFound("button")}
+                        {isEnglish ? "Go back to Homepage" : "بازگشت به صفحه اصلی"}
                     </Link>
                 </MotionDiv>
             </SectionToScroll>

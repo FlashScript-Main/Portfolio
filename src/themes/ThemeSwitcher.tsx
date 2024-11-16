@@ -29,7 +29,7 @@ const ThemeSwitcher = ({ onClose }: { onClose: () => void }) => {
                         onClick={() => handleThemeChange(themeOption.value)}
                         className={`
                             py-2 | ${themeOption.textColor} ${themeOption.bgColor} font-semibold ${spaceMono} | 
-                            ${themeOption.value === "nftDefault" && "max-md:col-span-2 lg:col-span-2"}
+                            ${themeOption.value === "default" && "max-md:col-span-2 lg:col-span-2"}
                             ${themeOption.value === "light" && "lg:col-span-2"} 
                             ${themeOption.value === "dark" && "lg:col-span-2"} 
                             rounded-full border-2 border-portfolio-card_border hover:border-portfolio-text_secondary main-transition-color

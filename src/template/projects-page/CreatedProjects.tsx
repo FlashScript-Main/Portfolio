@@ -83,7 +83,7 @@ const CreatedProjects = () => {
                                             className={`size-10 object-cover rounded-full |  |  | `}
                                         />
 
-                                        <span className={` | text-portfolio-text_secondary text-base xl:text-lg font-semibold ${spaceMono} line-clamp-1 capitalize |  | `}>
+                                        <span className={` | text-portfolio-text_secondary text-base xl:text-lg font-semibold ${spaceMono} truncate capitalize |  | `}>
                                             {isEnglish ? card.titleEn : card.titleFa}
                                         </span>
                                     </MotionDiv>

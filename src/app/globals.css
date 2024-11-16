@@ -89,347 +89,181 @@
 /* Light Theme */
 .light {
   --portfolio-background: #FFFFFF;
-  --portfolio-card-background: #00B050;
+  --portfolio-card-background: #79d5ff;
   --portfolio-card-border: #FF4D4F;
   --portfolio-text-primary: #000000;
   --portfolio-text-secondary: #0066FF;
-
-  --nft-background: ;
-  --nft-background-secondary: ;
-  --nft-c-l-text: #333333;
-  --nft-text: ;
-  --nft-cta: ;
-  --nft-text-accent: #666666;
-  --nft-blue-accent: #0056D2;
-  --nft-red-accent: ;
-  --nft-header-bg: #FFFFFF;
-  --nft-footer-bg: #F1F1F1;
-  --nft-countdown-bg: 244, 244, 244;
-  --nft-create-account-svg: #B3B3B3;
-  --nft-rankings-change: ;
 }
 
 /* Dark Theme */
 .dark {
-  --nft-background: #121212;
-  --nft-background-secondary: #1D1D1D;
-  --nft-c-l-text: #BBBBBB;
-  --nft-text: #E0E0E0;
-  --nft-cta: #e415ff;
-  --nft-text-accent: #828282;
-  --nft-blue-accent: #3700B3;
-  --nft-red-accent: #CF6679;
-  --nft-header-bg: #121212;
-  --nft-footer-bg: #1D1D1D;
-  --nft-countdown-bg: 29, 29, 29;
-  --nft-create-account-svg: #606060;
-  --nft-rankings-change: #03DAC6;
+  --portfolio-background: #121212;
+  --portfolio-card-background: #606060;
+  --portfolio-card-border: #BBBBBB;
+  --portfolio-text-primary: #E0E0E0;
+  --portfolio-text-secondary: #e7e700;
 }
 
 /* Monochrome */
 .monochrome {
-  --nft-background: #333333;
-  --nft-background-secondary: #555555;
-  --nft-c-l-text: #AAAAAA;
-  --nft-text: #F2F2F2;
-  --nft-cta: #8C8C8C;
-  --nft-text-accent: #C0C0C0;
-  --nft-blue-accent: #B0B0B0;
-  --nft-red-accent: #D9D9D9;
-  --nft-header-bg: #333333;
-  --nft-footer-bg: #555555;
-  --nft-countdown-bg: 85, 85, 85;
-  --nft-create-account-svg: #A0A0A0;
-  --nft-rankings-change: #808080;
+  --portfolio-background: #333333;
+  --portfolio-card-background: #555555;
+  --portfolio-card-border: #8C8C8C;
+  --portfolio-text-primary: #AAAAAA;
+  --portfolio-text-secondary: #F2F2F2;
 }
 
 /* Cyberpunk */
 .cyberpunk {
-  --nft-background: #1A1A40;
-  --nft-background-secondary: #710000;
-  --nft-c-l-text: #CCFF00;
-  --nft-text: #FDF500;
-  --nft-cta: #CB1DCD;
-  --nft-text-accent: #00E1FF;
-  --nft-blue-accent: #00FFBB;
-  --nft-red-accent: #FF004C;
-  --nft-header-bg: #1A1A40;
-  --nft-footer-bg: #2E2E50;
-  --nft-countdown-bg: 46, 46, 80;
-  --nft-create-account-svg: #D1FF00;
-  --nft-rankings-change: #F2FF00;
+  --portfolio-background: #1A1A40;
+  --portfolio-card-background: #00E1FF;
+  --portfolio-card-border: #710000;
+  --portfolio-text-primary: #CCFF00;
+  --portfolio-text-secondary: #CB1DCD;
 }
 
 /* Retro */
 .retro {
-  --nft-background: #f98f0e;
-  --nft-background-secondary: #FFCA3A;
-  --nft-c-l-text: #111111;
-  --nft-text: #8C1C13;
-  --nft-cta: #1985A1;
-  --nft-text-accent: #E71D36;
-  --nft-blue-accent: #2A71D0;
-  --nft-red-accent: #A71D31;
-  --nft-header-bg: #FFCA3A;
-  --nft-footer-bg: #FDF3E7;
-  --nft-countdown-bg: 253, 243, 231;
-  --nft-create-account-svg: #7F2E13;
-  --nft-rankings-change: #FF9F1C;
+  --portfolio-background: #f98f0e;
+  --portfolio-card-background: #FFCA3A;
+  --portfolio-card-border: #A71D31;
+  --portfolio-text-primary: #8C1C13;
+  --portfolio-text-secondary: #111111;
 }
 
 /* Forest */
 .forest {
-  --nft-background: #2B5C2E;
-  --nft-background-secondary: #446C47;
-  --nft-c-l-text: #D9F2C3;
-  --nft-text: #F0F7EE;
-  --nft-cta: #78C850;
-  --nft-text-accent: #99A98F;
-  --nft-blue-accent: #67A7CB;
-  --nft-red-accent: #C94C4C;
-  --nft-header-bg: #2B5C2E;
-  --nft-footer-bg: #446C47;
-  --nft-countdown-bg: 68, 108, 71;
-  --nft-create-account-svg: #B0CDA0;
-  --nft-rankings-change: #95D255;
+  --portfolio-background: #2B5C2E;
+  --portfolio-card-background: #B0CDA0;
+  --portfolio-card-border: #09a206;
+  --portfolio-text-primary: #D9F2C3;
+  --portfolio-text-secondary: #1e3802;
 }
 
 /* Aqua */
 .aqua {
-  --nft-background: #003D5B;
-  --nft-background-secondary: #007D7E;
-  --nft-c-l-text: #B1F1F5;
-  --nft-text: #E2FAF9;
-  --nft-cta: #00CED1;
-  --nft-text-accent: #72A9AB;
-  --nft-blue-accent: #006778;
-  --nft-red-accent: #D65A31;
-  --nft-header-bg: #003D5B;
-  --nft-footer-bg: #007D7E;
-  --nft-countdown-bg: 0, 125, 126;
-  --nft-create-account-svg: #66C7C7;
-  --nft-rankings-change: #00A5B6;
+  --portfolio-background: #003D5B;
+  --portfolio-card-background: #B1F1F5;
+  --portfolio-card-border: #007D7E;
+  --portfolio-text-primary: #006778;
+  --portfolio-text-secondary: #00CED1;
 }
 
 /* Pastel */
 .pastel {
-  --nft-background: #FFE4E1;
-  --nft-background-secondary: #FFDAB9;
-  --nft-c-l-text: #7D7D7D;
-  --nft-text: #4C4C4C;
-  --nft-cta: #FFB6C1;
-  --nft-text-accent: #E6E6E6;
-  --nft-blue-accent: #A2CFFE;
-  --nft-red-accent: #FFA07A;
-  --nft-header-bg: #E455AE;
-  --nft-footer-bg: #E455AE;
-  --nft-countdown-bg: 255, 218, 185;
-  --nft-create-account-svg: #FFCDD2;
-  --nft-rankings-change: #F5A9B8;
+  --portfolio-background: #FFDAB9;
+  --portfolio-card-background: #e672b9;
+  --portfolio-card-border: #bb3905;
+  --portfolio-text-primary: #F5A9B8;
+  --portfolio-text-secondary: #6c035f;
 }
 
 /* Midnight */
 .midnight {
-  --nft-background: #191970;
-  --nft-background-secondary: #1C1F3A;
-  --nft-c-l-text: #B2B2E5;
-  --nft-text: #E1E1F5;
-  --nft-cta: #4C4CFF;
-  --nft-text-accent: #8080B2;
-  --nft-blue-accent: #7E83F3;
-  --nft-red-accent: #D1005A;
-  --nft-header-bg: #191970;
-  --nft-footer-bg: #1C1F3A;
-  --nft-countdown-bg: 28, 31, 58;
-  --nft-create-account-svg: #4A4A7D;
-  --nft-rankings-change: #5F5FFF;
+  --portfolio-background: #191970;
+  --portfolio-card-background: #B2B2E5;
+  --portfolio-card-border: #5F5FFF;
+  --portfolio-text-primary: #E1E1F5;
+  --portfolio-text-secondary: #4C4CFF;
 }
 
 /* Solarized */
 .solarized {
-  --nft-background: #073642;
-  --nft-background-secondary: #002B36;
-  --nft-c-l-text: #839496;
-  --nft-text: #EEE8D5;
-  --nft-cta: #B58900;
-  --nft-text-accent: #586E75;
-  --nft-blue-accent: #268BD2;
-  --nft-red-accent: #DC322F;
-  --nft-header-bg: #073642;
-  --nft-footer-bg: #002B36;
-  --nft-countdown-bg: 7, 54, 66;
-  --nft-create-account-svg: #657B83;
-  --nft-rankings-change: #93A1A1;
+  --portfolio-background: #073642;
+  --portfolio-card-background: #268BD2;
+  --portfolio-card-border: #002B36;
+  --portfolio-text-primary: #EEE8D5;
+  --portfolio-text-secondary: #073642;
 }
 
 /* Ocean */
 .ocean {
-  --nft-background: #013A63;
-  --nft-background-secondary: #014F86;
-  --nft-c-l-text: #A9D6E5;
-  --nft-text: #E1F5FE;
-  --nft-cta: #00BFFF;
-  --nft-text-accent: #B3E0F2;
-  --nft-blue-accent: #0288D1;
-  --nft-red-accent: #FF7E79;
-  --nft-header-bg: #013A63;
-  --nft-footer-bg: #014F86;
-  --nft-countdown-bg: 1, 79, 134;
-  --nft-create-account-svg: #6CC8EB;
-  --nft-rankings-change: #00ACC1;
+  --portfolio-background: #013A63;
+  --portfolio-card-background: #0288D1;
+  --portfolio-card-border: #014F86;
+  --portfolio-text-primary: #E1F5FE;
+  --portfolio-text-secondary: #014F86;
 }
 
 /* Sunset */
 .sunset {
-  --nft-background: #F97306;
-  --nft-background-secondary: #ff4343;
-  --nft-c-l-text: #3E2723;
-  --nft-text: #FDF4F4;
-  --nft-cta: #FFB74D;
-  --nft-text-accent: #FFCCBC;
-  --nft-blue-accent: #FF8A65;
-  --nft-red-accent: #E64A19;
-  --nft-header-bg: #F97306;
-  --nft-footer-bg: #FF7043;
-  --nft-countdown-bg: 255, 112, 67;
-  --nft-create-account-svg: #FFAB91;
-  --nft-rankings-change: #FFA726;
+  --portfolio-background: #F97306;
+  --portfolio-card-background: #3E2723;
+  --portfolio-card-border: #ff4343;
+  --portfolio-text-primary: #FDF4F4;
+  --portfolio-text-secondary: #FFB74D;
 }
 
 /* Lavender */
 .lavender {
-  --nft-background: #B39DDB;
-  --nft-background-secondary: #9575CD;
-  --nft-c-l-text: #5E35B1;
-  --nft-text: #FAF2FF;
-  --nft-cta: #001aff;
-  --nft-text-accent: #D1C4E9;
-  --nft-blue-accent: #7E57C2;
-  --nft-red-accent: #AB47BC;
-  --nft-header-bg: #B39DDB;
-  --nft-footer-bg: #9575CD;
-  --nft-countdown-bg: 149, 117, 205;
-  --nft-create-account-svg: #BA68C8;
-  --nft-rankings-change: #8E24AA;
+  --portfolio-background: #B39DDB;
+  --portfolio-card-background: #9575CD;
+  --portfolio-card-border: #5E35B1;
+  --portfolio-text-primary: #FAF2FF;
+  --portfolio-text-secondary: #001aff;
 }
 
 /* Vintage */
 .vintage {
-  --nft-background: #D9BF77;
-  --nft-background-secondary: #E0C097;
-  --nft-c-l-text: #5D4037;
-  --nft-text: #3E2723;
-  --nft-cta: #FFCA28;
-  --nft-text-accent: #D7CCC8;
-  --nft-blue-accent: #8D6E63;
-  --nft-red-accent: #B71C1C;
-  --nft-header-bg: #D9BF77;
-  --nft-footer-bg: #E0C097;
-  --nft-countdown-bg: 224, 192, 151;
-  --nft-create-account-svg: #BCAAA4;
-  --nft-rankings-change: #FFB300;
+  --portfolio-background: #D9BF77;
+  --portfolio-card-background: #5D4037;
+  --portfolio-card-border: #8D6E63;
+  --portfolio-text-primary: #3E2723;
+  --portfolio-text-secondary: #FFCA28;
 }
 
 /* Candy */
 .candy {
-  --nft-background: #F48FB1;
-  --nft-background-secondary: #F06292;
-  --nft-c-l-text: #D81B60;
-  --nft-text: #880E4F;
-  --nft-cta: #F50057;
-  --nft-text-accent: #c6295e;
-  --nft-blue-accent: #C2185B;
-  --nft-red-accent: #FF80AB;
-  --nft-header-bg: #F48FB1;
-  --nft-footer-bg: #F06292;
-  --nft-countdown-bg: 240, 98, 146;
-  --nft-create-account-svg: #D81B60;
-  --nft-rankings-change: #FF4081;
+  --portfolio-background:  #D81B60;
+  --portfolio-card-background: #FF4081;
+  --portfolio-card-border: #c6295e;
+  --portfolio-text-primary: #F48FB1;
+  --portfolio-text-secondary:  #880E4F;
 }
 
 /* Neon */
 .neon {
-  --nft-background: #0B132B;
-  --nft-background-secondary: #1C2541;
-  --nft-c-l-text: #5BC0BE;
-  --nft-text: #FFFFFF;
-  --nft-cta: #3A506B;
-  --nft-text-accent: #6FFFE9;
-  --nft-blue-accent: #0B84A5;
-  --nft-red-accent: #FF6B6B;
-  --nft-header-bg: #0B132B;
-  --nft-footer-bg: #1C2541;
-  --nft-countdown-bg: 28, 37, 65;
-  --nft-create-account-svg: #3BBA9C;
-  --nft-rankings-change: #FDCB6E;
+  --portfolio-background:  #0B132B;
+  --portfolio-card-background:  #5BC0BE;
+  --portfolio-card-border: #6FFFE9;
+  --portfolio-text-primary: #FFFFFF;
+  --portfolio-text-secondary:  #3A506B;
 }
 
 /* Earth */
 .earth {
-  --nft-background: #5C4033;
-  --nft-background-secondary: #6E573A;
-  --nft-c-l-text: #C2B280;
-  --nft-text: #F4F1E3;
-  --nft-cta: #A67B5B;
-  --nft-text-accent: #D2B48C;
-  --nft-blue-accent: #96705B;
-  --nft-red-accent: #964B00;
-  --nft-header-bg: #5C4033;
-  --nft-footer-bg: #6E573A;
-  --nft-countdown-bg: 110, 87, 58;
-  --nft-create-account-svg: #B68C6C;
-  --nft-rankings-change: #8B4513;
+  --portfolio-background:  #5C4033;
+  --portfolio-card-background:   #C2B280;
+  --portfolio-card-border: #964B00;
+  --portfolio-text-primary: #F4F1E3;
+  --portfolio-text-secondary:  #5C4033;
 }
 
 /* Autumn */
 .autumn {
-  --nft-background: #8B4513;
-  --nft-background-secondary: #A0522D;
-  --nft-c-l-text: #FFD700;
-  --nft-text: #FFFFFF;
-  --nft-cta: #FF8C00;
-  --nft-text-accent: #FFA07A;
-  --nft-blue-accent: #8B0000;
-  --nft-red-accent: #B22222;
-  --nft-header-bg: #8B4513;
-  --nft-footer-bg: #A0522D;
-  --nft-countdown-bg: 160, 82, 45;
-  --nft-create-account-svg: #FF7F50;
-  --nft-rankings-change: #FF4500;
+  --portfolio-background: #8B4513;
+  --portfolio-card-background: #FFA07A;
+  --portfolio-card-border: #FF4500;
+  --portfolio-text-primary: #FFFFFF;
+  --portfolio-text-secondary: #8B0000;
 }
 
 /* Gold */
 .gold {
-  --nft-background: #FFD700;
-  --nft-background-secondary: #FFECB3;
-  --nft-c-l-text: #3E2723;
-  --nft-text: #4B2E2E;
-  --nft-cta: #FFC107;
-  --nft-text-accent: #E1BEE7;
-  --nft-blue-accent: #FFD54F;
-  --nft-red-accent: #C2185B;
-  --nft-header-bg: #FFD700;
-  --nft-footer-bg: #FFECB3;
-  --nft-countdown-bg: 255, 236, 179;
-  --nft-create-account-svg: #FFAB00;
-  --nft-rankings-change: #FF6D00;
+  --portfolio-background: #FFD700;
+  --portfolio-card-background:  #FFAB00;
+  --portfolio-card-border:    #C2185B;
+  --portfolio-text-primary: #4B2E2E;
+  --portfolio-text-secondary: #df6102;
 }
 
 /* Royal */
 .royal {
-  --nft-background: #2A1A5E;
-  --nft-background-secondary: #3A1F5D;
-  --nft-c-l-text: #D4AF37;
-  --nft-text: #FFFFFF;
-  --nft-cta: #6A0DAD;
-  --nft-text-accent: #A57EDE;
-  --nft-blue-accent: #4B0082;
-  --nft-red-accent: #C71585;
-  --nft-header-bg: #2A1A5E;
-  --nft-footer-bg: #3A1F5D;
-  --nft-countdown-bg: 58, 31, 93;
-  --nft-create-account-svg: #8A2BE2;
-  --nft-rankings-change: #A020F0;
+  --portfolio-background: #2A1A5E;
+  --portfolio-card-background: #6A0DAD;
+  --portfolio-card-border: #C71585;
+  --portfolio-text-primary: #D4AF37;
+  --portfolio-text-secondary: #FFFFFF;
 }
 /* #endregion */
 

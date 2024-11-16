@@ -86,7 +86,7 @@ export const customThemes = [
       nameEn: "Pastel",
       nameFa: "رنگ مداد",
       bgColor: "bg-gradient-to-r from-[#FFE4E1] to-[#FFDAB9]",
-      textColor: "text-[#FFB6C1]"
+      textColor: "text-[#e672b9]"
     },
     { 
       value: "midnight", 
@@ -128,14 +128,14 @@ export const customThemes = [
       nameEn: "Vintage",
       nameFa: "قدیمی",
       bgColor: "bg-gradient-to-r from-[#D9BF77] to-[#E0C097]",
-      textColor: "text-[#FFCA28]"
+      textColor: "text-[#5D4037]"
     },
     { 
       value: "candy", 
       nameEn: "Candy",
       nameFa: "آبنباتی",
       bgColor: "bg-gradient-to-r from-[#F48FB1] to-[#F06292]",
-      textColor: "text-[#F50057]"
+      textColor: "text-[#880E4F]"
     },
     { 
       value: "neon", 
@@ -163,14 +163,14 @@ export const customThemes = [
       nameEn: "Gold",
       nameFa: "طلایی",
       bgColor: "bg-gradient-to-r from-[#FFD700] to-[#FFECB3]",
-      textColor: "text-[#FFC107]"
+      textColor: "text-[#df6102]"
     },
     { 
       value: "royal", 
       nameEn: "Royal",
       nameFa: "سلطنتی",
       bgColor: "bg-gradient-to-r from-[#2A1A5E] to-[#3A1F5D]",
-      textColor: "text-[#6A0DAD]"
+      textColor: "text-[#C71585]"
     },
 ];
 

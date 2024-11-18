@@ -682,7 +682,7 @@ export const skillsTechnologiesInfo = [
   {
     id: 30,
     tooltipContent: "Next UI",
-    href: "https://polypane.app/",
+    href: "https://nextui.org/",
     classNames: "md:-mt-[4.5rem] md:-ml-[17.5rem] lg:-mt-[5.5rem] lg:-ml-[21.5rem] xl:-mt-[6.5rem] xl:-ml-[26rem]",
     imageSrc: "nextui.png",
     imageClassNames: "scale-[1.3] group-hover:scale-[1.4]",

@@ -56,11 +56,11 @@ const InstallPWA = ({ onClose }: { onClose: () => void }) => {
               <div className={`py-3 md:py-4 px-4 md:px-6 | bg-portfolio-background | flex items-center max-md:justify-between gap-2 md:gap-4 lg:gap-6 xl:gap-8 | rounded-[20px] ${language("isEnglish") === "false" && "flex-row-reverse"}`}>
                   <h5 className={`my-auto | text-portfolio-text_primary text-base md:text-lg font-medium |  | `}>
                     <span className={`max-md:hidden |  |  | `}>
-                      {language("isEnglish") === "true" ? "Install NFT Marketplace Application" : "بازار توکن دیجیتال را نصب کنید"}
+                      {language("isEnglish") === "true" ? "Install FlashScript Portfolio" : "پورتفولیو فلش اسکریپت را نصب کنید"}
                     </span>
 
                     <span className={`md:hidden |  |  | `}>
-                      {language("isEnglish") === "true" ? "Install NFT Marketplace" : "نصب بازار توکن دیجیتال"}
+                      {language("isEnglish") === "true" ? "Install Portfolio" : "نصب پورتفولیو"}
                     </span>
                   </h5>
 
